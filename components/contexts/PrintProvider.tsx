@@ -27,7 +27,7 @@ export default function PrintProvider({ children }: { children: ReactNode }) {
     //     }, 500);
     //   });
     // },
-    documentTitle: `Resume - Sajib Khan`,
+    documentTitle: `Resume - Md. Mehadi Hasan`,
     onPrintError: (error) => console.log('error PrintProvider: ', error),
 
     contentRef: componentRef,

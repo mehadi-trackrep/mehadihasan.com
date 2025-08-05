@@ -27,7 +27,7 @@ export default function HeaderSection({ usage }: Props) {
     <div className="flex w-full flex-col items-center justify-center lg:w-[28%] lg:items-start lg:justify-start print:w-[28%] print:items-start print:justify-start">
       <div className="flex items-start justify-center lg:justify-start print:justify-start">
         <h1 className="text-3xl font-bold text-black dark:text-white">
-          Sajib Khan
+          Md. Mehadi Hasan
         </h1>
         <div className="flex items-center mt-1 ml-3 text-zinc-900 dark:text-zinc-200">
           {socialLinks.map(({ name, icon: Icon, link }) => (
@@ -53,11 +53,11 @@ export default function HeaderSection({ usage }: Props) {
 
       <div className="space-y-2 text-zinc-800 dark:text-zinc-400">
         <Link
-          href="mailto:sajibcse68@gmail.com"
+          href="mailto:mehadi541@gmail.com"
           className="flex items-center gap-2"
         >
           <FaEnvelope />
-          <span>sajibcse68@gmail.com</span>
+          <span>mehadi541@gmail.com</span>
         </Link>
         <Link href="tel:+8801798500100" className="flex items-center gap-2">
           <FaPhone />

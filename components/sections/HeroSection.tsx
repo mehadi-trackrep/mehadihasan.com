@@ -71,13 +71,13 @@ function HeroSection() {
             {/** <!-- Name Tag --> */}
             <div className="flex justify-center gap-4 lg:justify-start">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                👋 Hi, I&apos;m Sajib Khan
+                👋 Hi, I&apos;m Md. Mehadi Hasan
               </span>
 
               {/** <!-- Social Links --> */}
               <div className="flex gap-2 justify-center items-center">
                 <Link
-                  href="https://www.linkedin.com/in/sajibkhan"
+                  href="https://www.linkedin.com/in/mmh49"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   target="_blank"
                 >
@@ -94,7 +94,7 @@ function HeroSection() {
                 </Link>
 
                 <Link
-                  href="https://github.com/sajibcse68"
+                  href="https://github.com/mehadi-trackrep"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
                   target="_blank"
                 >
@@ -153,7 +153,7 @@ function HeroSection() {
                 width="384"
                 height="384"
                 className="relative rounded-full w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 object-cover mx-auto border-4 border-white dark:border-gray-800 shadow-xl"
-                alt="sajib"
+                alt="mehadi"
               />
             </div>
           </div>

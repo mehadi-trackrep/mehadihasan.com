@@ -107,7 +107,7 @@ export default function Navbar() {
           )}
           href="/"
         >
-          <h1>Sajib Khan</h1>
+          <h1>Md. Mehadi Hasan</h1>
         </Link>
       </div>
 
@@ -161,7 +161,7 @@ export default function Navbar() {
               )}
               href="/"
             >
-              <h1>Sajib Khan</h1>
+              <h1>Md. Mehadi Hasan</h1>
             </Link>
             <button
               type="button"
