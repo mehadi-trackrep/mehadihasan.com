@@ -14,7 +14,7 @@
 
 ## Overview
 
-[Live Deployment of this repo](https://sajibkhan.com)
+[Live Deployment of this repo](https://mehadihasan-com.vercel.app/)
 
 ## Getting Started
 
