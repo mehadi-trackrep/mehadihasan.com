@@ -40,7 +40,8 @@ function BlogCard({ blog }: BlogCardProps) {
         <div className="p-4">
           <div>
             <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
-              <time>{formatDate(date ?? new Date(), 'yyyy-MM-ii')}</time>
+              {/* <time>{formatDate(date ?? new Date(), 'yyyy-MM-ii')}</time> */}
+              <time>{date}</time>
               <span>•</span>
               <span>{readingTime} min read</span>
             </div>
