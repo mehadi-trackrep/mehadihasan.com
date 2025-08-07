@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: 'Sabbir Amin',
-    img: '/images/people/sabbir-amin.png',
+    img: '/images/people/sabbir-amin.jpeg',
     designation:
       'Technical Lead at TechCare | Ex Senior Software Engineer at Goava | Machine Learning | Recommendation System | Opensource Contributor',
     caption: 'February 25, 2024, Sabbir Amin worked with Mehadi in different teams',
