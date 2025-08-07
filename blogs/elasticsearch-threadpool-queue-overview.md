@@ -52,6 +52,10 @@ Whereas the fixed-size thread pools are used for request-processing tasks such a
             queue_size: 1000
 ```
 
+> ℹ️ Write threads pool manages incoming index, delete, update, and bulk requests.
+Whereas, Index thread pool only manage the indexing requests. There is another bulk thread pool.
+Anyway, in the modern Elasticsearch/OpenSearch service supports all the operations are handled by a single unified write thread pool.
+
 🧠 What happens if incoming requests find the node's associated queue is full?
 Ans: The new requests will be rejected. This is known as thread pool rejection — such as ThreadpoolSearchRejected, ThreadpoolWriteRejected.
 Then the client typically receives a 429 HTTP status code.
