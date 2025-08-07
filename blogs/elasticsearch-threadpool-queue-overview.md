@@ -41,14 +41,15 @@ Whereas the fixed-size thread pools are used for request-processing tasks such a
 ℹ️ A fixed queue size implies a bounded queue; otherwise, the queue is unbounded.
 ```
     thread_pool:
-    search:
-    size: 30
-    queue_size: 10000
-
+        search:
+            size: 30
+            queue_size: 10000
+```
+```
     thread_pool:
-    write:
-    size: 30
-    queue_size: 1000
+        write:
+            size: 30
+            queue_size: 1000
 ```
 
 🧠 What happens if incoming requests find the node's associated queue is full?
