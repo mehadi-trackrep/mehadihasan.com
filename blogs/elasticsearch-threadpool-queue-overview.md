@@ -50,17 +50,19 @@ Whereas the fixed-size thread pools are used for request-processing tasks such a
     size: 30
     queue_size: 1000
 ```
+
 🧠 What happens if incoming requests find the node's associated queue is full?
 Ans: The new requests will be rejected. This is known as thread pool rejection — such as ThreadpoolSearchRejected, ThreadpoolWriteRejected.
 Then the client typically receives a 429 HTTP status code.
 
 🔴 ThreadPoolRejection issues can occur due to several factors, including:
-    • *Insufficient hardware resources*: CPU, memory, I/O.
-    • *Misconfigured thread pool sizes*: inappropriate sizes and queues.
-    • *High request rates*: maybe cluster is receiving really a high number of requests, and
-    • *Slow request processing*: slow queries, inefficient index structures, or insufficient hardware resources might be the reasons.
+    * *Insufficient hardware resources*: CPU, memory, I/O.
+    * *Misconfigured thread pool sizes*: inappropriate sizes and queues.
+    * *High request rates*: maybe cluster is receiving really a high number of requests, and
+    * *Slow request processing*: slow queries, inefficient index structures, or insufficient hardware resources might be the reasons.
 
 💡 To troubleshoot these issues, we can use ES's
+* APIs:
     * built-in monitoring API,
     * _settings API,
     * _nodes/stats,
