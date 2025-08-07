@@ -112,19 +112,17 @@ function HeroSection() {
 
             {/** <!-- Main Headline --> */}
             <h1 className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white">
-              <span className="block">Frontend Developer</span>
+              <span className="block">Data Engineer</span>
               <span className="text-2xl lg:text-[26px] xl:text-4xl block mt-2 text-gray-600 dark:text-slate-500">
-                & Innovative Web Solutions Architect
+                & AI Enthusiast
               </span>
             </h1>
 
             {/** <!-- Sub-headline --> */}
             <p className="flex w-full mx-auto max-w-2xl flex-wrap justify-center gap-4 text-lg text-gray-600 dark:text-gray-300 sm:text-xl lg:justify-start">
-              Passionate Frontend Architect with 10+ years of experience in
-              transforming complex requirements into high-performance web
-              solutions. Skilled in JavaScript, React, TypeScript, and Next.js,
-              I deliver user-friendly applications with a focus on scalability
-              and performance. Let&apos;s build something amazing! 🚀
+              Passionate in building scalable data pipelines and
+              implementing AI solutions. I specialize in Python, SQL, Elasticsearch, Scrapy, Playwright, API development, Athena and
+              AWS Services to drive data-driven decision-making.
             </p>
 
             {/** <!-- CTA Buttons --> */}

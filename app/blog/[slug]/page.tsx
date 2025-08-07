@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: any) {
   const _params = await params;
   const { slug } = _params ?? {};
   const blog = getBlogContent(slug);
-  const title = slug ? `${blog?.data?.title} | Sajib's Blog` : `Sajib's Blog`;
+  const title = slug ? `${blog?.data?.title} | Mehadi's Blog` : `Mehadi's Blog`;
 
   return getSiteMetaData({
     title: title || '',

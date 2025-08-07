@@ -11,7 +11,7 @@ export const generateStaticParams = async () => {
 
 export async function generateMetadata({ params }: any) {
   return {
-    title: `Sajib's Blogs | Expert Thoughts on JavaScript, React, TypeScript, and Next.js`,
+    title: `Mehadi's Blogs | Expert Thoughts on Data Eng., Elasticsearch & AI`,
   };
 }
 

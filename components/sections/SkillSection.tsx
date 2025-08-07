@@ -4,13 +4,22 @@ import Section from './Section';
 
 export default function SkillSection() {
   const topSkills = [
-    'JavaScript',
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Redux',
-    'CSS',
-    'HTML5',
+    'Python',
+    'SQL',
+    'AWS ES',
+    'Scrapy',
+    'Playwright',
+    'PySpark',
+    'Kafka',
+    'Pandas',
+    'Iceberg',
+    'Crawl4ai',
+    'Pydantic',
+    'Pytest',
+    'FastAPI',
+    'LLM',
+    'Langchain',
+    'n8n',
     'Git',
   ];
 
@@ -39,7 +48,7 @@ export default function SkillSection() {
         title="SKILLS"
       >
         <div className="space-y-2">
-          <ul className="grid grid-cols-2 gap-x-3 gap-y-1">
+          <ul className="grid grid-cols-4 gap-x-1 gap-y-1">
             {topSkills.map((skill) => (
               <li key={skill}>•&nbsp; {skill}</li>
             ))}
@@ -47,9 +56,9 @@ export default function SkillSection() {
         </div>
       </Section>
 
-      <div className="mt-10 hidden h-[130px] w-1 border-2 border-gray-300 lg:block print:block" />
+      {/* <div className="mt-10 hidden h-[130px] w-1 border-2 border-gray-300 lg:block print:block" /> */}
 
-      <div className="pl-0 mt-4 w-full lg:w-auto print:w-auto">
+      {/* <div className="pl-0 mt-4 w-full lg:w-auto print:w-auto">
         <h2 className="text-lg">StackOverflow</h2>
 
         <div className="flex justify-between items-center font-bold border-b-2 border-gray-300">
@@ -93,14 +102,10 @@ export default function SkillSection() {
                 />
                 <p>210</p>
               </div>
-              {/* <div className="flex w-full items-center justify-between">
-                <FaVuejs size="24" />
-                <p>146</p>
-              </div> */}
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

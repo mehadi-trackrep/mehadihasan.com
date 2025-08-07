@@ -12,8 +12,8 @@ import { cn } from '@/utils/common';
 
 export async function generateMetadata() {
   return {
-    title: 'Resume | Sajib Khan',
-    description: 'Sajib Khan - Frontend Developer',
+    title: 'Resume | Md. Mehadi Hasan',
+    description: 'Md. Mehadi Hasan - Data Engineer',
   };
 }
 

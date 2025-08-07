@@ -12,46 +12,46 @@ export default function ProjectSection() {
       head1: (
         <TitleWithLink
           // image="/images/logos/nextjs.png"
-          title="MyDailyLearn"
-          link="https://github.com/sajibcse68/MyDailyLearn"
+          title="Booking-Agoda Hotel Scraper"
+          link="https://github.com/mehadi-trackrep/booking-agoda-hotel-scraper"
         />
       ),
       head2: (
         <LabelWithGraphic
           icon={Icons.Stack}
-          content="JavaScript, React, Git, CSS"
+          content="Scrapy, Celery, Playwright, Redis, Docker"
         />
       ),
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'Collection of interview questions for frontend development, categorized by topic and technology.',
+        'An effective hotel search web app which fetches the hotel info from booking.com and agoda.com based on user input and shows the best matches.',
       ],
     },
     {
       head1: (
         <TitleWithLink
           // image="/images/logos/tailwind.webp"
-          title="CSS Advanced Animations"
+          title="ETL: Athena to Elasticsearch & DynaoDB"
           link="https://github.com/sajibcse68/css-advanced-animations"
         />
       ),
-      head2: <LabelWithGraphic icon={Icons.Stack} content="HTML, CSS" />,
+      head2: <LabelWithGraphic icon={Icons.Stack} content="UV, Pydantic, Factory design pattern, SOLID principles" />,
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'Collection of interactive buttons, a distinct CSS animation or, transition effect triggered on hover',
+        'An etl pipeline - fetch data from AWS Athena and store them into ES/OpenSearch & DynamoDB using `uv` package manager.',
       ],
     },
     {
       head1: (
         <TitleWithLink
-          title="Different Charts Using D3.js"
-          link="https://github.com/sajibcse68/charts-using-d3.js"
+          title="DRASTIC Vulnerabilities Prediction"
+          link="https://github.com/mehadi-trackrep/DRASTIC-Vulnerabilities-Prediction"
         />
       ),
-      head2: <LabelWithGraphic icon={Icons.Stack} content="D3.js, JS, CSS" />,
+      head2: <LabelWithGraphic icon={Icons.Stack} content="Pandas, Scikit-Learn, Ensemble, OneVsRestClassifier" />,
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'A collection of dynamic charts including tree maps, choropleths, heat maps, scatterplots, and bar charts to visualize complex data interactively.',
+        'Vulnerability prediction for groundwater resources using DRASTIC model, which is a widely used method for assessing groundwater vulnerability.',
       ],
     },
   ];

@@ -4,12 +4,12 @@ import LabelWithGraphic from '@/components/label-with-graphic';
 const education: EducationProps[] = [
   {
     title: 'BSc in Computer Science and Engineering',
-    gpa: '1st class',
+    gpa: '3.81 [rank: 4th]',
     org: {
-      name: 'Chittagong University of Engineering & Technology',
-      logo: '/images/cuet.png',
+      name: 'Shahjalal University of Science & Technology',
+      logo: '/images/sust_logo_big.png',
     },
-    time: '2009 - 2014',
+    time: '2015 - 2019',
   },
   // {
   //   title: 'Data Visualization using D3, JavaScript, React.js, Web Development',
@@ -29,13 +29,18 @@ function Education({ title, gpa, org, time }: EducationProps) {
         <div className="text-base font-semibold flex flex-wrap justify-between">
           <div className="flex gap-x-4 flex-wrap">
             <span className="font-bold text-zinc-900 dark:text-zinc-200">
-              {title}
+              {title} | {time}
             </span>
           </div>
         </div>
 
         <div className="text-sm text-zinc-700 dark:text-zinc-400">
           <LabelWithGraphic image={org.logo} content={org.name} />
+        </div>
+        <div className="text-sm text-zinc-700 dark:text-zinc-400">
+            <span className="font-bold text-zinc-900 dark:text-zinc-200">
+              CGPA: {gpa}
+            </span>
         </div>
       </div>
     </section>

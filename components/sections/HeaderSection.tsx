@@ -49,7 +49,7 @@ export default function HeaderSection({ usage }: Props) {
           ))}
         </div>
       </div>
-      <h2 className="text-[22px] mb-3">Lead Software Engineer</h2>
+      <h2 className="text-[22px] mb-3">Senior Software Engineer</h2>
 
       <div className="space-y-2 text-zinc-800 dark:text-zinc-400">
         <Link
@@ -59,9 +59,9 @@ export default function HeaderSection({ usage }: Props) {
           <FaEnvelope />
           <span>mehadi541@gmail.com</span>
         </Link>
-        <Link href="tel:+8801798500100" className="flex items-center gap-2">
+        <Link href="tel:+8801796777157" className="flex items-center gap-2">
           <FaPhone />
-          <span>+8801798500100</span>
+          <span>+8801796777157</span>
         </Link>
       </div>
     </div>

@@ -68,10 +68,17 @@ function NavLink({
   const pathname = usePathname();
   const isSelected = href === pathname || pathname.startsWith(`${href}/`);
 
+  // Check if this is the resume link
+  const isResumeLink = href === '/resume';
+  const linkHref = isResumeLink 
+    ? 'https://docs.google.com/document/d/1BE9g9QXOK4do0nDGU3f4U25GRd3ufss8uZCSnNaOX0k/edit?usp=sharing'
+    : href;
+
   return (
     <li className="list-none px-5 py-2">
       <Link
-        prefetch={true}
+        // prefetch={true}
+        prefetch={!isResumeLink} // Don't prefetch external links
         className={cn(
           'underlined block whitespace-nowrap text-lg font-medium hover:text-team-current focus:text-team-current focus:outline-none',
           {
@@ -79,7 +86,9 @@ function NavLink({
             'text-secondary': !isSelected,
           }
         )}
-        href={href}
+        href={linkHref}
+        target={isResumeLink ? '_blank' : undefined}
+        rel={isResumeLink ? 'noopener noreferrer' : undefined}
         {...rest}
       />
     </li>

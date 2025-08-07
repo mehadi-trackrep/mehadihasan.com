@@ -12,7 +12,7 @@ const exp: ExperienceProps[] = [
     head1: (
       <LabelWithGraphic
         icon={Icons.Briefcase}
-        content="Lead Software Engineer"
+        content="Senior Software Engineer"
       />
     ),
     head2: (
@@ -21,7 +21,7 @@ const exp: ExperienceProps[] = [
         link="https://www.goava.com"
       />
     ),
-    head4: '07/21 - Pres.',
+    head4: '03/25 - Pres.',
     bulletPoints: [
       'Led a full UI/UX revamp that boosted application performance by 30% via React optimization, lazy loading and render blocking minimization.',
       'Architected a scalable system using React, Redux, Next.js & TypeScript.',
@@ -34,7 +34,7 @@ const exp: ExperienceProps[] = [
     head1: (
       <LabelWithGraphic
         icon={Icons.Briefcase}
-        content="Senior Software Engineer"
+        content="Software Engineer"
       />
     ),
     head2: (
@@ -43,7 +43,7 @@ const exp: ExperienceProps[] = [
         link="https://www.goava.com"
       />
     ),
-    head4: '07/19 - 06/21',
+    head4: '10/22 - 03/25',
     bulletPoints: [
       'Designed and developed 100+ reusable React components across SaaS app.',
       'Developed and enhanced modern web applications using React, Context API, GraphQL, ES6+ & Styled-components, ensuring clean and maintainable code.',
@@ -56,16 +56,22 @@ const exp: ExperienceProps[] = [
     head1: (
       <LabelWithGraphic
         icon={Icons.Briefcase}
-        content="Senior Software Engineer"
+        content="Junior Software Engineer"
       />
     ),
     head2: (
-      <TitleWithLink title="AppsCode Inc. 🇺🇸" link="https://appscode.com" />
+      <TitleWithLink
+        title="Goava Sales Intelligence AB 🇸🇪"
+        link="https://www.goava.com"
+      />
     ),
-    head4: '11/14 - 06/19',
+    head4: '11/20 - 10/22',
     bulletPoints: [
-      'Developed Kubernetes Dashboard leveraging Vue.js 2, Vuex with 95% reusable components. Automated testing using Jenkins CI.',
-      'Crafted a responsive website for appscode.com utilizing Hugo. Developed a chrome extension.',
+      'Designed and developed 100+ reusable React components across SaaS app.',
+      'Developed and enhanced modern web applications using React, Context API, GraphQL, ES6+ & Styled-components, ensuring clean and maintainable code.',
+      'Developed interactive data visualizations with D3.js while maintaining smooth user experience.',
+      'Migrated APIs from REST to GraphQL using Axios, AWS AppSync & Normalizr, improving API efficiency, flexibility, and reducing load time by 20%.',
+      'Manage the frontend team in an Agile environment, fostering collaboration and maintaining productivity.',
     ],
   },
 ];

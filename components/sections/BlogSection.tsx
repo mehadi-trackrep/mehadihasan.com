@@ -13,7 +13,7 @@ function BlogSection() {
             Latest Blog Posts
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            Insights and experiences from my journey in web development
+            Insights and experiences from my journey in data engineering and software development.
           </p>
         </div>
 
