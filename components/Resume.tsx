@@ -28,7 +28,8 @@ const ResumeNew = React.forwardRef(({ usage }: Props, ref) => {
     <div
       className={cn(
         robotoCondensed.className,
-        'relative max-w-xl bg-white px-4 pt-1 dark:bg-zinc-900 lg:mx-auto lg:h-[30.5cm] lg:w-[24cm] lg:max-w-7xl print:h-[30.5cm] print:w-[24cm] print:max-w-7xl'
+        // 'relative max-w-xl bg-white px-4 pt-1 dark:bg-zinc-900 lg:mx-auto lg:h-[30.5cm] lg:w-[24cm] lg:max-w-7xl print:h-[30.5cm] print:w-[24cm] print:max-w-7xl'
+        'relative max-w-xl bg-white px-4 pt-1 dark:bg-zinc-900 lg:mx-auto lg:max-w-7xl print:h-[30.5cm] print:w-[24cm] print:max-w-7xl'
       )}
     >
       {/* top section */}
