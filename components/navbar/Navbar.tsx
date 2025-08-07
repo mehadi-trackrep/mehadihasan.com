@@ -77,8 +77,8 @@ function NavLink({
   return (
     <li className="list-none px-5 py-2">
       <Link
-        // prefetch={true}
-        prefetch={!isResumeLink} // Don't prefetch external links
+        prefetch={true}
+        // prefetch={!isResumeLink} // Don't prefetch external links
         className={cn(
           'underlined block whitespace-nowrap text-lg font-medium hover:text-team-current focus:text-team-current focus:outline-none',
           {
@@ -86,9 +86,10 @@ function NavLink({
             'text-secondary': !isSelected,
           }
         )}
-        href={linkHref}
-        target={isResumeLink ? '_blank' : undefined}
-        rel={isResumeLink ? 'noopener noreferrer' : undefined}
+        href={href}
+        // href={linkHref}
+        // target={isResumeLink ? '_blank' : undefined}
+        // rel={isResumeLink ? 'noopener noreferrer' : undefined}
         {...rest}
       />
     </li>
