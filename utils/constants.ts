@@ -9,26 +9,21 @@ export const socialLinks = [
   {
     name: 'LinkedIn',
     icon: FaLinkedin,
-    link: 'https://www.linkedin.com/in/sajibkhan',
+    link: 'https://www.linkedin.com/in/mmh49',
   },
   {
     name: 'Github',
     icon: FaGithub,
-    link: 'https://github.com/sajibcse68',
-  },
-  {
-    name: 'Stack Overflow',
-    icon: FaStackOverflow,
-    link: 'https://stackoverflow.com/users/4133798/sajib-khan',
+    link: 'https://github.com/mehadi-trackrep',
   },
   // {
   //   name: 'Email',
   //   icon: FaEnvelope,
-  //   link: 'mailto:sajibcse68@gmail.com',
+  //   link: 'mailto:test@gmail.com',
   // },
   // {
   //   name: 'Phone',
   //   icon: FaPhone,
-  //   link: 'tel:+8801798500100',
+  //   link: 'tel:+88011949611406',
   // },
 ];
