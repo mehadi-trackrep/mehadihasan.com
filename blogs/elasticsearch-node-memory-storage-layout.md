@@ -69,5 +69,11 @@ Let's see simply again the working paths (Indexing Path & Search Path).
     Response sent to client
 ```
 
+#### 📌 Key Takeaways
+* **Threadpools & queues** → JVM heap.
+* **In-memory indexing buffers & caches** → JVM heap.
+* **Segment file content for searches** → OS page cache (outside JVM heap, still RAM).
+* **EBS volume** is persistent storage; OS page cache + Lucene memory-mapped files keep hot data in RAM.
+* **Half RAM for heap**, **half for OS cache** is the golden rule.
 
 Happy learning! 📚
