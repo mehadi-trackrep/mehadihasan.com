@@ -14,13 +14,13 @@ categories:
 
 ![How Elasticsearch Cluster Manages Node Memory and Storage Layout?](/images/blogs/elasticsearch-node-memory-storage-layout.png 'How Elasticsearch Cluster Manages Node Memory and Storage Layout?')
 
-# How Elasticsearch Cluster Manages Node Memory and Storage Layout? 🧠
+# How Elasticsearch Clusters Manage Node Memory and Storage Layout 🧠
 
-💡 AWS OpenSearch (/Elasticsearch) manages each node's memory and storage similar to a computer.
-But it interpretes the things in its own management system and working paths.
+💡 AWS OpenSearch (formerly Elasticsearch) manages each node’s memory and storage much like a traditional server, but applies its own internal management mechanisms and operational workflows.
 
-A simple & easily understandable layout diagram shown in the picture.
-Concisely it depicts like:
+The diagram below provides a simplified, easy-to-understand layout.
+
+In short, it illustrates the following:
 #### `[ Physical RAM ]`
        │
        ├── [ JVM Process (Elasticsearch) ]
