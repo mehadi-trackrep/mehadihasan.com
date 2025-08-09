@@ -1,4 +1,3 @@
-import { getBlogContent, getReadingTime } from '@/utils/blogs';
 import { formatDate } from '@/utils/common';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,15 +9,19 @@ type BlogCardProps = {
     description: string;
     cover_image: string;
     date: string;
-    categories: string;
+    categories: string[];
+    readingTime: number;
   };
 };
 
 function BlogCard({ blog }: BlogCardProps) {
-  const { slug, title, description, cover_image, date, categories } = blog;
-  const readingTime = getReadingTime(getBlogContent(slug)?.content ?? '');
+  const { slug, title, description, cover_image, date, readingTime } = blog;
 
-  const coverImageUrl = cover_image ? cover_image : `/images/blogs/${slug}.webp`;
+  const coverImageUrl = cover_image && cover_image.startsWith('http')
+    ? cover_image
+    : cover_image
+    ? `/images/blogs/${slug}${cover_image.substring(cover_image.lastIndexOf('.'))}`
+    : `/images/blogs/${slug}.webp`;
 
   return (
     <Link href={`/blog/${slug}`}>

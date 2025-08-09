@@ -2,7 +2,7 @@
 title: 'An Indexing Request (Single and Bulk) Lifecycle - Elasticsearch'
 date: '2025-08-08'
 description: 'When a client initiates a search or indexing request to Elasticsearch, the system follows a defined sequence of processing steps. Do you know why what are the steps?'
-cover_image: '/images/blogs/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp'
+cover_image: '/images/blogs/elasticsearch/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp'
 categories:
   - aws
   - elasticsearh
@@ -11,7 +11,7 @@ categories:
   - learning
 ---
 
-![An Indexing Request Single and Bulk Lifecycle - Elasticsearch](/images/blogs/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp "An Indexing Request Single and Bulk Lifecycle - Elasticsearch")
+![An Indexing Request Single and Bulk Lifecycle - Elasticsearch](/images/blogs/elasticsearch/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp "An Indexing Request Single and Bulk Lifecycle - Elasticsearch")
 
 # 🔄 An Entire Lifecycle of An Indexing Request (Single & Bulk) in Elasticsearch
 

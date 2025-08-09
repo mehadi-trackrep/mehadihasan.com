@@ -1,31 +1,49 @@
 import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
 
 export const getBlogsMetadata = (basePath: string) => {
-  const folder = basePath + '/';
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith('.md'));
+  const getPosts = (dir: string): string[] => {
+    const files = fs.readdirSync(dir);
+    let posts: string[] = [];
 
-  // get the file data
-  const posts = markdownPosts.map((filename) => {
-    const fileContents = fs.readFileSync(`${basePath}/${filename}`, 'utf8');
+    files.forEach((file) => {
+      const fullPath = path.join(dir, file);
+      const stat = fs.statSync(fullPath);
+
+      if (stat.isDirectory() && file !== 'not_final') {
+        posts = posts.concat(getPosts(fullPath));
+      } else if (file.endsWith('.md')) {
+        posts.push(fullPath);
+      }
+    });
+
+    return posts;
+  };
+
+  const files = getPosts(basePath);
+
+  const posts = files.map((filename) => {
+    const fileContents = fs.readFileSync(filename, 'utf8');
     const matterResult = matter(fileContents);
+    const slug = filename.replace('.md', '').replace(basePath + '/', '');
 
     return {
       categories: matterResult.data.categories,
       date: matterResult.data.date,
       description: matterResult.data.description,
       cover_image: matterResult.data.cover_image,
-      slug: filename.replace('.md', ''),
+      slug: slug,
       title: matterResult.data.title,
+      readingTime: getReadingTime(matterResult.content),
     };
   });
+
   return posts;
 };
 
 export const getBlogContent = (slug: string) => {
-  const folder = 'blogs/';
-  const file = folder + `${slug}.md`;
+  const file = `blogs/${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');
 
   const matterResult = matter(content);
@@ -45,7 +63,7 @@ export function getReadingTime(content: string) {
   const textContent = content.replace(/```[\s\S]*?```/g, '');
 
   // Count images
-  const imageCount = (content.match(/!$.*?$$.*?$/g) || []).length;
+  const imageCount = (content.match(/!$.*?$.*?$/g) || []).length;
 
   // Count regular words
   const words = textContent.trim().split(/\s+/).length;
@@ -59,3 +77,5 @@ export function getReadingTime(content: string) {
 
   return readingTime;
 }
+
+

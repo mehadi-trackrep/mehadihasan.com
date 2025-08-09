@@ -2,7 +2,7 @@
 title: 'Understanding of EC2 and Elasticsearch Storage and JVM Memory'
 date: '2025-08-04'
 description: 'It is must required to know about AWS EC2 and Elasticsarch storage options and types especially how the JVM memory performs.'
-cover_image: '/images/blogs/ec2-elasticsarch-storage-jvm-memory.webp'
+cover_image: '/images/blogs/elasticsearch/ec2-elasticsarch-storage-jvm-memory.webp'
 categories:
   - aws
   - elasticsearh
@@ -11,7 +11,7 @@ categories:
   - learning
 ---
 
-![Understanding of EC2 and Elasticsearch Storage and JVM Memory](/images/blogs/ec2-elasticsarch-storage-jvm-memory.webp 'Understanding of EC2 and Elasticsearch Storage and JVM Memory')
+![Understanding of EC2 and Elasticsearch Storage and JVM Memory](/images/blogs/elasticsearch/ec2-elasticsarch-storage-jvm-memory.webp 'Understanding of EC2 and Elasticsearch Storage and JVM Memory')
 
 # Understanding of EC2 and Elasticsearch Storage and JVM Memory 🧠
 

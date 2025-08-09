@@ -2,7 +2,7 @@
 title: 'How Elasticsearch Cluster Manages Node Memory and Storage Layout?'
 date: '2025-08-08'
 description: 'When a client initiates a search or indexing request to Elasticsearch, the system follows a defined sequence of processing steps. Do you know why what are the steps?'
-cover_image: '/images/blogs/elasticsearch-node-memory-storage-layout.png'
+cover_image: '/images/blogs/elasticsearch/elasticsearch-node-memory-storage-layout.png'
 categories:
   - aws
   - elasticsearh
@@ -12,7 +12,7 @@ categories:
   - learning
 ---
 
-![How Elasticsearch Cluster Manages Node Memory and Storage Layout?](/images/blogs/elasticsearch-node-memory-storage-layout.png 'How Elasticsearch Cluster Manages Node Memory and Storage Layout?')
+![How Elasticsearch Cluster Manages Node Memory and Storage Layout?](/images/blogs/elasticsearch/elasticsearch-node-memory-storage-layout.png 'How Elasticsearch Cluster Manages Node Memory and Storage Layout?')
 
 # How Elasticsearch Clusters Manage Node Memory and Storage Layout 🧠
 

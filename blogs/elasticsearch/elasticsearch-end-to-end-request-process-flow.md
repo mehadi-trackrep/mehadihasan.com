@@ -2,7 +2,7 @@
 title: 'Elasticsearch End-to-End Request Process Abstract Flow'
 date: '2025-08-03'
 description: 'When a client initiates a search or indexing request to Elasticsearch, the system follows a defined sequence of processing steps. Do you know why what are the steps?'
-cover_image: '/images/blogs/elasticsearch-end-to-end-request-process-flow.webp'
+cover_image: '/images/blogs/elasticsearch/elasticsearch-end-to-end-request-process-flow.webp'
 categories:
   - aws
   - elasticsearh
@@ -10,7 +10,7 @@ categories:
   - learning
 ---
 
-![Elasticsearch End-to-End Request Process Abstract Flow](/images/blogs/elasticsearch-end-to-end-request-process-flow.webp 'Elasticsearch End-to-End Request Process Abstract Flow')
+![Elasticsearch End-to-End Request Process Abstract Flow](/images/blogs/elasticsearch/elasticsearch-end-to-end-request-process-flow.webp 'Elasticsearch End-to-End Request Process Abstract Flow')
 
 # Elasticsearch End-to-End Request Process Abstract Flow 🧠
 

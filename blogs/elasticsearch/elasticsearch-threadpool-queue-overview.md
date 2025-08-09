@@ -2,7 +2,7 @@
 title: 'Demystifying Elasticsearch Threadpool & Queue'
 date: '2025-08-03'
 description: 'When a client initiates a search or indexing request to Elasticsearch, the system follows a defined sequence of processing steps. Do you know why what are the steps?'
-cover_image: '/images/blogs/elasticsearch-threadpool-queue-overview.webp'
+cover_image: '/images/blogs/elasticsearch/elasticsearch-threadpool-queue-overview.webp'
 categories:
   - aws
   - elasticsearh
@@ -10,7 +10,7 @@ categories:
   - learning
 ---
 
-![Demystifying Elasticsearch Threadpool & Queue](/images/blogs/elasticsearch-threadpool-queue-overview.webp 'Demystifying Elasticsearch Threadpool & Queue')
+![Demystifying Elasticsearch Threadpool & Queue](/images/blogs/elasticsearch/elasticsearch-threadpool-queue-overview.webp 'Demystifying Elasticsearch Threadpool & Queue')
 
 # Demystifying Elasticsearch Threadpool & Queue 🧠
 

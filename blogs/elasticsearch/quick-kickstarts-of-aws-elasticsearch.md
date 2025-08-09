@@ -2,6 +2,7 @@
 title: 'Quick Kickstarts of AWS OpenSearch(/Elasticsearch)'
 date: '2025-08-01'
 description: 'A Quick overview of what is AWS Elasticsearch, when it is a perfect choice, cluster data distribution, sharding, replicas, configurations and common issues.'
+cover_image: '/images/blogs/elasticsearch/quick-kickstarts-of-aws-elasticsearch.webp'
 categories:
   - aws
   - elasticsearch
@@ -9,7 +10,7 @@ categories:
   - learning
 ---
 
-![Quick Kickstarts of AWS OpenSearch(/Elasticsearch)](/images/blogs/quick-kickstarts-of-aws-elasticsearch.webp 'Quick Kickstarts of AWS OpenSearch(/Elasticsearch')
+![Quick Kickstarts of AWS OpenSearch(/Elasticsearch)](/images/blogs/elasticsearch/quick-kickstarts-of-aws-elasticsearch.webp 'Quick Kickstarts of AWS OpenSearch(/Elasticsearch')
 
 # Quick Kickstarts of AWS OpenSearch(/Elasticsearch) 🚀
 

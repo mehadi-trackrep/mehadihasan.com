@@ -8,13 +8,14 @@ import { getSiteMetaData } from '@/utils/seo';
 
 export async function generateStaticParams() {
   const blogs = getBlogsMetadata('blogs');
-  return blogs.map((blog) => ({ slug: blog.slug }));
+  return blogs.map((blog) => ({ slug: blog.slug.split('/') }));
 }
 
 export async function generateMetadata({ params }: any) {
   const _params = await params;
   const { slug } = _params ?? {};
-  const blog = getBlogContent(slug);
+  const slugStr = slug.join('/');
+  const blog = getBlogContent(slugStr);
   const title = slug ? `${blog?.data?.title} | Mehadi's Blog` : `Mehadi's Blog`;
 
   return getSiteMetaData({
@@ -26,7 +27,8 @@ export async function generateMetadata({ params }: any) {
 
 export default async function BlogPage(props: any) {
   const { slug } = await props.params;
-  const blog = getBlogContent(slug);
+  const slugStr = slug.join('/');
+  const blog = getBlogContent(slugStr);
 
   return (
     <article className="markdown col-span-full mx-auto grid max-w-7xl grid-cols-4 gap-x-4 break-words md:grid-cols-8 lg:col-span-8 lg:col-start-3 lg:grid-cols-12 lg:gap-x-6">
