@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 import { Footer } from '@/components/footer';
+import ScrollToTopButton from '@/components/buttons/ScrollToTopButton';
 
 // utils
 import { getSiteMetaData } from '@/utils/seo';
@@ -27,6 +28,7 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
+          <ScrollToTopButton />
           <div className="flex h-full flex-col bg-white px-6 transition dark:bg-blue2-900 sm:px-6">
             <Navbar />
 

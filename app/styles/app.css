@@ -205,3 +205,25 @@ light-mode {
 .quote-child > *:last-child:after {
 	content: '”';
 }
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.scroll-to-top button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-to-top button:hover {
+    opacity: 0.8;
+}
