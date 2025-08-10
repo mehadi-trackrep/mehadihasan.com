@@ -10,11 +10,13 @@ import ActionButton from '@/components/action-button';
 // utils
 import { cn } from '@/utils/common';
 
+import { getSiteMetaData } from '@/utils/seo';
+
 export async function generateMetadata() {
-  return {
+  return getSiteMetaData({
     title: 'Resume | Md. Mehadi Hasan',
     description: 'Md. Mehadi Hasan - Data Engineer',
-  };
+  });
 }
 
 export default function ResumePage() {

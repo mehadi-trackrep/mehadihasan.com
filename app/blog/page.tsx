@@ -9,10 +9,12 @@ export const generateStaticParams = async () => {
   return blogs.map((blog) => ({ slug: blog.slug }));
 };
 
+import { getSiteMetaData } from '@/utils/seo';
+
 export async function generateMetadata({ params }: any) {
-  return {
+  return getSiteMetaData({
     title: `Mehadi's Blogs | Expert Thoughts on Data Eng., Elasticsearch & AI`,
-  };
+  });
 }
 
 export default function BlogPage() {
