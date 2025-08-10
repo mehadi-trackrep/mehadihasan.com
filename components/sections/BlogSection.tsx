@@ -1,10 +1,10 @@
-import Link from 'next/link';
-
-// components
-import Blogs from '@/components/blogs/Blogs';
 import { ViewAllBtn } from '@/components/buttons/ViewAllBtn';
+import { getBlogsMetadata } from '@/utils/blogs';
+import FilteredBlogs from '@/components/blogs/FilteredBlogs';
 
 function BlogSection() {
+  const blogs = getBlogsMetadata('blogs');
+
   return (
     <section className="backdrop-blur-lg bg-white/30 dark:bg-gray-900/30 rounded-xl pt-20">
       <div className="max-w-7xl mx-auto">
@@ -18,7 +18,7 @@ function BlogSection() {
         </div>
 
         {/* All blogs */}
-        <Blogs limit={6} />
+        <FilteredBlogs blogs={blogs} limit={6} />
 
         {/** <!-- "View All" Button --> */}
         <ViewAllBtn />
