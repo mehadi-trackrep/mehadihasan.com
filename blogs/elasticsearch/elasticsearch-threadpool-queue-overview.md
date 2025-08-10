@@ -7,7 +7,6 @@ categories:
   - aws
   - elasticsearh
   - coordinating node
-  - learning
 ---
 
 ![Demystifying Elasticsearch Threadpool & Queue](/images/blogs/elasticsearch/elasticsearch-threadpool-queue-overview.webp 'Demystifying Elasticsearch Threadpool & Queue')

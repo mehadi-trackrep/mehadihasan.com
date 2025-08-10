@@ -18,7 +18,7 @@ function BlogSection() {
         </div>
 
         {/* All blogs */}
-        <Blogs />
+        <Blogs limit={6} />
 
         {/** <!-- "View All" Button --> */}
         <ViewAllBtn />

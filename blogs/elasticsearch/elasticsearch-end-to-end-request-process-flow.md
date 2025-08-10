@@ -7,7 +7,6 @@ categories:
   - aws
   - elasticsearh
   - coordinating node
-  - learning
 ---
 
 ![Elasticsearch End-to-End Request Process Abstract Flow](/images/blogs/elasticsearch/elasticsearch-end-to-end-request-process-flow.webp 'Elasticsearch End-to-End Request Process Abstract Flow')

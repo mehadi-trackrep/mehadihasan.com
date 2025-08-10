@@ -9,7 +9,6 @@ categories:
   - RAM
   - JVM Heap
   - JVM & OS Caches
-  - learning
 ---
 
 ![How Elasticsearch Cluster Manages Node Memory and Storage Layout?](/images/blogs/elasticsearch/elasticsearch-node-memory-storage-layout.png 'How Elasticsearch Cluster Manages Node Memory and Storage Layout?')

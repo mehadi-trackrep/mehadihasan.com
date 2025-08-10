@@ -29,7 +29,7 @@ export const getBlogsMetadata = (basePath: string) => {
     const slug = filename.replace('.md', '').replace(basePath + '/', '');
 
     return {
-      categories: matterResult.data.categories,
+      tags: matterResult.data.categories,
       date: matterResult.data.date,
       description: matterResult.data.description,
       cover_image: matterResult.data.cover_image,
@@ -39,7 +39,9 @@ export const getBlogsMetadata = (basePath: string) => {
     };
   });
 
-  return posts;
+  return posts.sort((a, b) => {
+    return new Date(a.date) > new Date(b.date) ? -1 : 1;
+  });
 };
 
 export const getBlogContent = (slug: string) => {
