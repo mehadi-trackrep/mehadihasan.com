@@ -1,4 +1,6 @@
 "use client";
+import Image from 'next/image';
+
 import { useEffect, useState } from "react";
 
 
@@ -40,7 +42,7 @@ export default function ScrollToTopButton() {
             outline: 'none'
           }}
         >
-          <img 
+          <Image 
             src="/icons/hand-pointing-up.png" 
             alt="hand pointing up" 
             width={50} 
