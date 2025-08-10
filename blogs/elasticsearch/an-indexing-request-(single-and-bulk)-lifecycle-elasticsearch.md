@@ -5,10 +5,9 @@ description: 'When a client initiates a search or indexing request to Elasticsea
 cover_image: '/images/blogs/elasticsearch/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - indexing request lifecycle
   - bulk indexing
-  - learning
 ---
 
 ![An Indexing Request Single and Bulk Lifecycle - Elasticsearch](/images/blogs/elasticsearch/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp "An Indexing Request Single and Bulk Lifecycle - Elasticsearch")

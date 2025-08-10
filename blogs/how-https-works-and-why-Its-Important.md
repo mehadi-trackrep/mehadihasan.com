@@ -5,7 +5,6 @@ description: 'Learn how HTTPS protects your online privacy, keeps your messages 
 categories:
   - web development
   - https
-  - learning
 ---
 
 ![How HTTPS Works and Why It's Important?](/images/blogs/how-https-works-and-why-Its-Important.webp "How HTTPS Works and Why It's Important?")

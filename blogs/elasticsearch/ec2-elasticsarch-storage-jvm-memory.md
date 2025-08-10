@@ -8,7 +8,6 @@ categories:
   - elasticsearh
   - ec2 storage
   - jvm memory
-  - learning
 ---
 
 ![Understanding of EC2 and Elasticsearch Storage and JVM Memory](/images/blogs/elasticsearch/ec2-elasticsarch-storage-jvm-memory.webp 'Understanding of EC2 and Elasticsearch Storage and JVM Memory')

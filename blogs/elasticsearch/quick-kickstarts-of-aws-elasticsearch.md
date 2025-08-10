@@ -7,7 +7,6 @@ categories:
   - aws
   - elasticsearch
   - data engineering
-  - learning
 ---
 
 ![Quick Kickstarts of AWS OpenSearch(/Elasticsearch)](/images/blogs/elasticsearch/quick-kickstarts-of-aws-elasticsearch.webp 'Quick Kickstarts of AWS OpenSearch(/Elasticsearch')

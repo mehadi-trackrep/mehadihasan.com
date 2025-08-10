@@ -32,6 +32,7 @@ export function getSiteMetaData({
   keywords?: string[];
 }) {
   return {
+    metadataBase: new URL('https://mehadihasan-com.vercel.app'),
     title,
     description,
     keywords,
