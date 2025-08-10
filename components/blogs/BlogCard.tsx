@@ -9,7 +9,7 @@ type BlogCardProps = {
     description: string;
     cover_image: string;
     date: string;
-    categories: string[];
+    tags: string[];
     readingTime: number;
   };
 };

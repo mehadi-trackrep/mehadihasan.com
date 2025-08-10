@@ -3,12 +3,27 @@
 import { useState, useMemo } from 'react';
 import BlogCard from '@/components/blogs/BlogCard';
 
-export default function FilteredBlogs({ blogs }) {
+type Blog = {
+  slug: string;
+  title: string;
+  description: string;
+  cover_image: string;
+  date: string;
+  tags: string[];
+  readingTime: number;
+};
+
+type FilteredBlogsProps = {
+  blogs: Blog[];
+  limit?: number;
+};
+
+export default function FilteredBlogs({ blogs, limit }: FilteredBlogsProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
 
   const allTags = useMemo(() => {
-    const tags = new Set();
+    const tags = new Set<string>();
     blogs.forEach(blog => {
       blog.tags.forEach(tag => tags.add(tag));
     });
@@ -16,7 +31,7 @@ export default function FilteredBlogs({ blogs }) {
   }, [blogs]);
 
   const filteredBlogs = useMemo(() => {
-    return blogs
+    const filtered = blogs
       .filter(blog => {
         return (
           blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -26,7 +41,9 @@ export default function FilteredBlogs({ blogs }) {
       .filter(blog => {
         return selectedTag ? blog.tags.includes(selectedTag) : true;
       });
-  }, [blogs, searchTerm, selectedTag]);
+
+    return limit ? filtered.slice(0, limit) : filtered;
+  }, [blogs, searchTerm, selectedTag, limit]);
 
   return (
     <div>
