@@ -137,5 +137,6 @@ POST /_reindex
     }
 }
 ```
+3. Finally scale down the cluster to the previous state.
 
 Happy learning! 📚
