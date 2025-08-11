@@ -67,7 +67,7 @@
 
 /* Code Blocks */
 .markdown pre {
-  @apply bg-gray-900 dark:bg-gray-800 rounded-lg p-4 mb-6 overflow-x-auto;
+  @apply bg-gray-100 dark:bg-gray-800 rounded-lg p-4 mb-6 overflow-x-auto text-gray-900 dark:text-gray-200;
 }
 
 .markdown code {
