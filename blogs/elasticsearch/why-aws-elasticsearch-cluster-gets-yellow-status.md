@@ -7,7 +7,7 @@ categories:
   - aws
   - elasticsearch
   - yellow status
-  - es best practices
+  - elasticsearch best practices
 ---
 
 ![Why does an AWS Elasticsearch cluster get a yellow status](/images/blogs/elasticsearch/why-aws-elasticsearch-cluster-gets-yellow-status.png "Why does an AWS Elasticsearch cluster get a yellow status")
@@ -20,7 +20,7 @@ categories:
 
 ℹ️ Suppose the overall configuration of our AWS Elasticsearch cluster is –
 * Total data nodes - 3. Per node configuration —
-    * Instance type: r6g.2xlarge.search [32 GiB RAM]
+    * Instance type: r6g.xlarge.search [32 GiB RAM]
     * Volume type: EBS
     * Volume size: 1150
 * Total master nodes - 2
