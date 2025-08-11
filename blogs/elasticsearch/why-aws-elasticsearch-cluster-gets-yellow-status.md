@@ -42,6 +42,7 @@ categories:
  * 10-50GiB for searching & 30-50GiB for indexing.
  * Keep the number of documents on each shard below 200 million.
  * Use warm or cold data storage tiers.
+ * Use aliases for the main indices.
  * To enhance fault-tolerance, use multiple AZs & proper sharding.
  * For time-series data, use ILM.
  * Enable slow logs.
@@ -92,12 +93,10 @@ and for *test-v1.0* (**374 GiB**) index:
 
 > ** Blue/Green Deployment: This involves setting up an entirely new, parallel cluster (the 'green' environment), reindexing data to it from the current cluster (the 'blue' environment), and then cutting over traffic. Although it ensures zero downtime, it is more costly. In contrast, using the **reindexing API** is a more cost-effective method that also provides near-zero downtime.
 
-To perform reindexing with temporary scaling, follow these key steps:
+⚒️ 🔥 To perform reindexing with temporary scaling, follow these key steps: 🔥
 1. Scale out the cluster by adding one or more data nodes.
 2. Create the new indices, ensuring they are configured correctly.
 For example:
-
-
 ```
 PUT /mehadi_v0.50
 {
@@ -137,10 +136,30 @@ POST /_reindex
     }
 }
 ```
-3. Finally scale down the cluster to the previous state.
+3. Atomically switch to the new index using an alias
+```
+POST /_aliases
+ {
+  actions": [
+    { "remove": { "index": "mehadi_v0.49", "alias": "my-data" } },
+    { "add": { "index": "mehadi_v0.50", "alias": "my-data" } }
+  ]
+}
+```
+```
+POST /_aliases
+ {
+  actions": [
+    { "remove": { "index": "test-v1.0", "alias": "my-test-data" } },
+    { "add": { "index": "test-v1.1", "alias": "my-test-data" } }
+  ]
+}
+```
+4. Verify and delete the old indices
+5. Finally scale down the cluster to the previous state.
 
 
-#### Summary:
+#### 🔖 Summary:
 If the issues discussed above are encountered, we should first verify that the cluster's configuration—including data volume, instances, and queries—adheres to recommended best practices. If all best practices are being followed, the next step is to scale the cluster either up or out.
 
 Happy learning! 📚
