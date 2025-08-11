@@ -139,4 +139,8 @@ POST /_reindex
 ```
 3. Finally scale down the cluster to the previous state.
 
+
+#### Summary:
+If the issues discussed above are encountered, we should first verify that the cluster's configuration—including data volume, instances, and queries—adheres to recommended best practices. If all best practices are being followed, the next step is to scale the cluster either up or out.
+
 Happy learning! 📚
