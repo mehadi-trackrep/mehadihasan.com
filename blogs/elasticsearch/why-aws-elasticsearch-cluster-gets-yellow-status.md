@@ -94,9 +94,10 @@ and for *test-v1.0* (**374 GiB**) index:
 > ** Blue/Green Deployment: This involves setting up an entirely new, parallel cluster (the 'green' environment), reindexing data to it from the current cluster (the 'blue' environment), and then cutting over traffic. Although it ensures zero downtime, it is more costly. In contrast, using the **reindexing API** is a more cost-effective method that also provides near-zero downtime.
 
 ⚒️ 🔥 To perform reindexing with temporary scaling, follow these key steps: 🔥
-1. Scale out the cluster by adding one or more data nodes.
-2. Create the new indices, ensuring they are configured correctly.
+1. **Scale out the cluster by adding one or more data nodes**.
+2. **Create the new indices, ensuring they are configured correctly**.
 For example:
+
 ```
 PUT /mehadi_v0.50
 {
@@ -111,6 +112,7 @@ PUT /mehadi_v0.50
       }
 }
 ```
+
 ```
 PUT /test-v1.1
 {
@@ -125,6 +127,7 @@ PUT /test-v1.1
       }
 }
 ```
+
 ```
 POST /_reindex
 {
@@ -136,7 +139,9 @@ POST /_reindex
     }
 }
 ```
-3. Atomically switch to the new index using an alias
+
+3. **Atomically switch to the new index using an alias**.
+
 ```
 POST /_aliases
  {
@@ -146,6 +151,7 @@ POST /_aliases
   ]
 }
 ```
+
 ```
 POST /_aliases
  {
@@ -155,8 +161,9 @@ POST /_aliases
   ]
 }
 ```
-4. Verify and delete the old indices
-5. Finally scale down the cluster to the previous state.
+
+4. **Verify and delete the old indices**.
+5. **Finally scale down the cluster to the previous state**.
 
 
 #### 🔖 Summary:
