@@ -20,15 +20,15 @@ categories:
 
 ℹ️ Suppose the overall configuration of our AWS Elasticsearch cluster is –
 * Total data nodes - 3. Per node configuration —
-    * Instance type: m6g.2xlarge.search [32 GiB RAM]
-    * Volume type: EBS - Provisioned IOPS (SSD)
+    * Instance type: r6g.2xlarge.search [32 GiB RAM]
+    * Volume type: EBS
     * Volume size: 1150
-* Total master nodes - 3
-* Total shards - 178
-* Field data cache size - 20
-* Max clause count - 2500
-* Total indices - 19 where two indices are the big ones named '**mehadi_v0.49**' & '**story-v1.0**'.
-* Shard configuration for each index: 5 primary shards & 1 replicas. So, 'mehadi_v0.49' has 5 primary shards & 5 replica shards. Same for 'story-v1.0' index.
+* Total master nodes - 2
+* Total shards - 168
+* Field data cache size - 18
+* Max clause count - 2000
+* Total indices - 15 where two indices are the big ones named '**mehadi_v0.49**' & '**test-v1.0**'.
+* Shard configuration for each index: 5 primary shards & 1 replicas. So, 'mehadi_v0.49' has 5 primary shards & 5 replica shards. Same for 'test-v1.0' index.
 
 🧠 Let's examine whether this cluster configuration aligns with best practices. 
 
@@ -41,7 +41,7 @@ categories:
  * If budget is not problem the use Instance Store (local NVMs).
  * 10-50GiB for searching & 30-50GiB for indexing.
  * Keep the number of documents on each shard below 200 million.
- * Use warm or clod data storage tiers.
+ * Use warm or cold data storage tiers.
  * To enhance fault-tolerance, use multiple AZs & proper sharding.
  * For time-series data, use ILM.
  * Enable slow logs.
@@ -82,7 +82,7 @@ At first, for *mehadi_v0.49* (**582 GiB**) index:
 * Calculation: 582 GiB/40 GiB per shard ≈ 14.5
 * Recommendation: Create a new index with 15 primary shards [**5 shards in each data node**]
 
-and for *story-v1.0* (**374 GiB**) index:
+and for *test-v1.0* (**374 GiB**) index:
 
 * Calculation: 374 GiB/40 GiB per shard ≈ 9.35 ≈ 12
 * Recommendation: Create a new index with 12 primary shards. [**4 shards in each data node**]
@@ -113,7 +113,7 @@ PUT /mehadi_v0.50
 }
 ```
 ```
-PUT /story-v1.1
+PUT /test-v1.1
 {
     "settings": {
          "index": {
@@ -122,7 +122,7 @@ PUT /story-v1.1
          }
        },
        "mappings": {
-        // Copy mappings from story-v1.0
+        // Copy mappings from test-v1.0
       }
 }
 ```
