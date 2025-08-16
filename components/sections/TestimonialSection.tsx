@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     designation:
       'Senior Software Engineer | BigData | NoSql | GraphDB | Machine Learning',
     caption: 'January 15, 2024, Ashraful Islam worked with Mehadi in the same data team',
-    text: "From the perspective of a team leader, I had the pleasure of working alongside Md. Mehadi Hasan, and he consistently impressed me with his dedication, integrity, and collaborative spirit. His expertise in Python, SQL, ElasticSearch, Data Engineering, and DevOps, coupled with his strong understanding of Scraping, OOP, API Development, and Git, make him a highly sought-after developer and an invaluable asset to any team. Beyond his technical skills, Mehadi is an exemplary team player. His honesty, dedication, and willingness to collaborate make him a true asset to any team. He consistently goes the extra mile, shares his knowledge readily, and fosters a positive and productive work environment. Without hesitation, I recommend Md. Mehadi Hasan for any backend or data-related system development project. He is a skilled developer, a dedicated team player, and a true asset to any organization.",
+    text: "From the perspective of a team leader, I had the pleasure of working alongside Md. Mehadi Hasan, and he consistently impressed me with his dedication, integrity, and collaborative spirit. His expertise in Python, SQL, ElasticSearch, Data Engineering, and DevOps, coupled with his strong understanding of Scraping, OOP, API Development, and Git, make him a highly sought-after developer and an invaluable asset to any team. \n\n Beyond his technical skills, Mehadi is an exemplary team player. His honesty, dedication, and willingness to collaborate make him a true asset to any team. He consistently goes the extra mile, shares his knowledge readily, and fosters a positive and productive work environment.\n Without hesitation, I recommend Md. Mehadi Hasan for any backend or data-related system development project. He is a skilled developer, a dedicated team player, and a true asset to any organization.",
     linkedinLink: 'https://www.linkedin.com/in/ashraful-islam-a336b271',
   },
   {
@@ -50,6 +50,15 @@ const testimonials: Testimonial[] = [
     caption: 'February 25, 2024, Sabbir Amin worked with Mehadi in different teams',
     text: "Md. Mehadi Hasan bhai is one of the youngest minds I've been fortunate to work with. He excells in Data Engineering with lots of industry experiences and edge cases. He is honest, energetic, punctual and shows genuine interest in Data Pipeline. Once as his colleague, I wonder his frank apporach, `never-bored-to-learn` attitude and believing in doing matra to face any challenges. It's an honour to share same working space with such a nice person like him. I wish him all the best.",
     linkedinLink: 'https://www.linkedin.com/in/sabbir-amin-035009120',
+  },
+  {
+    name: 'Md. Ariful Islam',
+    img: '/images/people/ariful-islam.jpeg',
+    designation:
+      'Software Engineer | Programmer | Java | C++ | Kotlin | Android',
+    caption: 'August 15, 2025, Md. Ariful and Md. Mehadi studied together',
+    text: "I had the privilege of working closely with Md. Mehadi Hasan during our university years, especially as group-mate for our final year thesis. From the very beginning, I was impressed by his passion for research, ability to dive deep into complex problems, and determination to deliver valuable, well-thought-out solutions. His exceptional dedication was reflected in his outstanding academic performance—ranking 4th in our department—along with numerous course projects built from scratch and achievements in competitive programming and problem-solving. \n\n What sets Mehadi apart is the blend of his strong technical expertise with his admirable personal qualities. Honest, punctual, and highly reliable, he brings excellent communication skills, natural leadership, and a proactive mindset to any team. I am confident he will deliver excellence, commitment, and creativity beyond the level in any professional environment, making him a true rare asset to any organization.",
+    linkedinLink: 'https://www.linkedin.com/in/ariful45/',
   },
 ];
 
@@ -114,7 +123,7 @@ const TestimonialSection = () => {
                 key={testimonial.name}
               >
                 <Link
-                  href="https://www.linkedin.com/in/sajibkhan/details/recommendations"
+                  href="https://www.linkedin.com/in/mmh49/details/recommendations"
                   target="_blank"
                 >
                   <div className="flex flex-col items-center">
@@ -151,7 +160,7 @@ const TestimonialSection = () => {
                     </div>
                     <p
                       className="text-[1rem] text-left text-gray-800 dark:text-white mb-4"
-                      dangerouslySetInnerHTML={{ __html: testimonial.text }}
+                      dangerouslySetInnerHTML={{ __html: testimonial.text.replace(/\n/g, '<br />') }}
                     ></p>
 
                     {/* <a
