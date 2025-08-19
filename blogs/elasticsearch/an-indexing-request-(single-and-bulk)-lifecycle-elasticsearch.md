@@ -1,7 +1,7 @@
 ---
 title: 'An Indexing Request (Single and Bulk) Lifecycle - Elasticsearch'
 date: '2025-08-08'
-description: 'When a client initiates a search or indexing request to Elasticsearch, the system follows a defined sequence of processing steps. Do you know why what are the steps?'
+description: 'An Entire Lifecycle of An Indexing Request (Single & Bulk) in Elasticsearch.  When we send a document to be indexed, here is the sequence of events that must happen before our client/service gets a 200 OK or 201 Created response.'
 cover_image: '/images/blogs/elasticsearch/an-indexing-request-(single-and-bulk)-lifecycle-elasticsearch.webp'
 categories:
   - aws
