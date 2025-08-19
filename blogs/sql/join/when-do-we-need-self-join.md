@@ -29,9 +29,9 @@ This is particularly useful for:
 2. **Comparing Rows within the Same Table**: For example, finding customers who live in the same city, or identifying duplicate records based on certain criteria.
 3. **Analyzing Sequential Data**: Where the current record's value depends on a previous record's value, such as calculating the difference between a current day's sales and the previous day's sales within a single sales table.
 
-Let's see a SQL problem from **Leetcode** — Rising Temperature.
+Let's see a SQL problem from **Leetcode** — 197. Rising Temperature.
 
-### Problem Statement
+### Problem Statement - 1
 
 ```
 Table: Weather
@@ -57,9 +57,50 @@ Return the result table in any order.
 💡 The solution will be like this —
 
 ```
-SELECT w2.id
-FROM Weather w1 JOIN weather w2
+SELECT 
+  w2.id
+FROM 
+  Weather w1 
+  JOIN weather w2
     ON (w1.recordDate = w2.recordDate - INTERVAL '1 day')
 WHERE w2.temperature > w1.temperature;
 ```
 
+Let's see an another SQL problem from **Leetcode** — 181. Employees Earning More Than Their Managers.
+
+### Problem Statement - 2
+
+```
+Table: Employee
+
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| id          | int     |
+| name        | varchar |
+| salary      | int     |
+| managerId   | int     |
++-------------+---------+
+id is the primary key (column with unique values) for this table.
+Each row of this table indicates the ID of an employee, their name, 
+salary, and the ID of their manager.
+ 
+
+Write a solution to find the employees who earn more than their managers.
+
+Return the result table in any order.
+```
+
+💡 The solution will be like this —
+
+<img src="/images/blogs/sql/join/181-employees-earning-more-than-their-managers.png" style="display:block; margin:auto; margin-bottom:20px;" width="800" height="500" alt="https-connection-is-secure">
+
+```
+SELECT 
+  e.name
+FROM 
+  Employee e
+  JOIN Employee m
+    ON (e.managerId=m.id)
+WHERE e.salary > m.salary
+```
