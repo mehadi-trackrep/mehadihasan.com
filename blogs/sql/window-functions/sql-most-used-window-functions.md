@@ -15,15 +15,16 @@ categories:
 # 🚀 Let’s talk about mostly used SQL window functions
 
 ### Why should we use that?
-SQL window functions are powerful tools for analytical queries, especially in data-heavy environments.
+📌 SQL window functions are powerful tools for analytical queries, especially in data-heavy environments.
 They were created to address limitations in traditional SQL operations, particularly for performing analytical calculations 
 across related rows without collapsing the result set.
+
 ℹ️ Without a **PARTITION BY** clause, a window function still operates on a window, but the entire result set is treated as a single, undivided window.
 
-> Unlike aggregate functions (e.g., SUM, AVG) which group rows and return a single result (*a single summary row*) per group, window functions operate on a defined set of rows (the "window") related to the current row, allowing calculations to be performed while still returning all individual rows. This is crucial for tasks like calculating running totals, moving averages, or ranking within specific partitions of data.
+Unlike aggregate functions (e.g., SUM, AVG) which group rows and return a single result (*a single summary row*) per group, window functions operate on a defined set of rows (the "window") related to the current row, allowing calculations to be performed while still returning all individual rows. This is crucial for tasks like calculating running totals, moving averages, or ranking within specific partitions of data.
 
 
-Let's deep dive in the seven most used window functions:
+⏳ Let's take a deep dive into the seven most used window functions:
 1. ROW_NUMBER();
 2. RANK();
 3. DENSE_RANK();
@@ -34,15 +35,57 @@ Let's deep dive in the seven most used window functions:
 
 
 
-⏭️ Okay, let's see how the big tech companies (such as Uber, Google, Amazon) use these in their data heavy environments.
+⏭️ Okay, let's see how big tech companies (such as Uber, Google, and Amazon) use these in their data-heavy environments.
 
-### [1] **ROW_NUMBER()**
+### [1] **ROW_NUMBER()** → Deduplication / Picking Top-N
 
-Usecase: When we need a unique sequential number for each row within a partition, even if there are ties.
+Usecase: When we need a unique sequential number for each row within a partition, even if there are ties.<br/>
 [✅ Always gives unique numbers: 1, 2, 3, 4...; e.g. **deduplication**, **pagination**]
 
-🚖 Uber Example: Assigning Rider Support Tickets
-Suppose Uber wants to assign unique ticket IDs to customer support requests per city, ordered by timestamp.
+
+| customer_id | order_id | order_date  | total_amount |
+|-------------|----------|-------------|--------------|
+| 100         | 1010     | 2025-04-05  | 111.20       |
+| 102         | 1007     | 2025-04-04  | 45.50        |
+| 103         | 1021     | 2025-04-06  | 203.00       |
+| 104         | 1035     | 2025-04-07  | 89.00        |
+| **101**         | 1012     | 2025-04-05  | 88.59       |
+| **101**         | 1031     | 2025-04-07  | 129.99       |
+| **101**         | 1033     | 2025-04-07  | 125.00       |
+
+📌 🛒 Amazon Example: **Finding the single most recent order for every customer**<br/>
+→ Amazon wants to identify the latest order for each customer — for follow-up emails, loyalty programs, or customer retention analysis.
+
+| customer_id | order_id | order_date  | total_amount | **row_number** |
+|-------------|----------|-------------|--------------|------------|
+| 101         | 1033     | 2025-04-07  | 125.00       | 1          |
+| 101         | 1031     | 2025-04-07  | 129.99       | 2          |
+| 101         | 1012     | 2025-04-05  | 88.59        | 3          |
+
+```
+SELECT 
+    customer_id,
+    order_id,
+    order_date,
+    total_amount
+FROM (
+    SELECT 
+        customer_id,
+        order_id,
+        order_date,
+        total_amount,
+        ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date DESC, order_id DESC) AS rn
+    FROM orders
+) ranked
+WHERE rn = 1;
+```
+
+👉 Why ROW_NUMBER()?<br/>
+Amazon wants exactly one most recent order per customer — so ROW_NUMBER() is the right choice.
+
+
+
+→ Suppose Uber wants to assign unique ticket IDs to customer support requests per city, ordered by timestamp.
 
 ```
 SELECT 
@@ -51,18 +94,19 @@ SELECT
     ROW_NUMBER() OVER (PARTITION BY city ORDER BY request_time) AS ticket_id
 FROM support_requests;
 ```
-👉 Why ROW_NUMBER()?
+👉 Why ROW_NUMBER()?<br/>
 Even if two requests happen at the same time, they must get different ticket IDs (no duplicates). Uniqueness is key.
 
 
 
-### [2] **RANK()**
 
-Usecase: When we want to rank rows, but allow gaps in ranking after ties.
+### [2] **RANK()** → Competition-style Ranking
+
+Usecase: When we want to rank rows, but allow gaps in ranking after ties like traditional competition-style ranking.<br/>
 [✅ Gives same rank for ties, then skips the next rank(s): 1, 1, 3, 4... ]
 
-🛒 Amazon Example: Top-Selling Products by Category
-Amazon wants to rank products in each category by units sold.
+📌 🛒 Amazon Example: **Top-Selling Products by Category**<br/>
+→ Amazon wants to rank products in each category by units sold.
 
 ```
 SELECT 
@@ -74,23 +118,29 @@ FROM product_sales;
 ```
 
 Suppose two products tie for 1st place:
+
     Product A: 500 units → Rank 1
     Product B: 500 units → Rank 1
     Product C: 400 units → Rank 3 (skips 2)
 
-👉 Why RANK()?
+👉 Why RANK()?<br/>
 It's okay to have gaps. The business wants to know: "Who are the top 3 ranked sold products?" and it's acceptable that there are 2 products in rank - 1 & no ranked 2 position. 
 Here, the Product C actually should be ranked as 3; cause its' postion in the 3rd row but as the first two ones are same sold, that's why they should be ranked same. That's the
 requirement here.
 
+✔ OR - Ranking sellers by revenue in a category. If two sellers tie at #1, the next seller is #3.
+Here, we need to reflect gaps (like Olympic medals: 1st, 2nd, 2nd, 4th).
 
-### [3] **DENSE_RANK()**
 
-Usecase: When we want to rank with no gaps after ties.
+
+
+### [3] **DENSE_RANK()** → Leaderboards Without Gaps
+
+Usecase: When we want to rank with no gaps after ties.<br/>
 [✅ Same rank for ties, but next rank is +1: 1, 1, 2, 3...]
 
-🛒 Amazon Example: Leaderboard for Internal Sales Reps
-Amazon wants to show a clean leaderboard for sales reps in each region.
+📌 🛒 Amazon Example: **Leaderboard for Internal Sales Reps**<br/>
+→ Amazon wants to show a clean leaderboard for sales reps in each region.
 
 ```
 SELECT 
@@ -106,17 +156,21 @@ If two reps tie for 1st:
     Rep B: $100K → Rank 1
     Rep C: $90K → Rank 2
 
-👉 Why DENSE_RANK()?
+👉 Why DENSE_RANK()?<br/>
 We want a clean, intuitive ranking: “Top 3 performers” should mean 3 ranks (1, 2, 3), not skip numbers. Gaps (RANK()) would confuse users.
 
+📌 🌐 Google Ads: **Ranking keywords by click-through-rate (CTR)**. If two have the same CTR, next rank continues sequentially.
 
-### [4] **NTILE(n)**
 
-Usecase: When we want to **divide rows** into roughly **equal-sized buckets** (e.g., quartiles, deciles).
+
+
+### [4] **NTILE(n)** → Segmentation / Bucketing
+
+Usecase: When we want to **divide rows** into roughly **equal-sized buckets** (e.g., quartiles, deciles).<br/>
 [✅ Splits data into n groups: 1, 2, ..., n ]
 
-🚕 Uber Example: Driver Performance Quartiles
-Uber wants to categorize drivers into quartiles (4 groups) based on trip completion rate.
+📌 🚕 Uber Example: **Driver Performance Quartiles**<br/>
+→ Uber wants to categorize drivers into quartiles (4 groups) based on trip completion rate.
 
 ```
 SELECT 
@@ -132,11 +186,11 @@ Result:
     ...
     Quartile 4: Bottom 25%
 
-👉 Why NTILE(4)?
+👉 Why NTILE(4)?<br/>
 For performance reviews, bonuses, or identifying underperformers, dividing into equal-sized buckets is more useful than ranks.
 
-🌐 Google Example: User Engagement Deciles
-Google wants to analyze user activity by dividing users into 10 deciles based on daily usage time.
+📌 🌐 Google Example: **User Engagement Deciles**<br/>
+→ Google wants to analyze user activity by dividing users into 10 deciles based on daily usage time.
 
 ```
 NTILE(10) OVER (ORDER BY daily_minutes) AS usage_decile
@@ -147,13 +201,13 @@ Useful for:
     - Identifying power users or churn risks
 
 
-### [5] **PERCENT_RANK()**
+### [5] **PERCENT_RANK()** → Relative Performance
 
-Usecase: When we want the relative rank as a percentage (0 to 1), useful for percentile analysis.
+Usecase: When we want the relative rank as a percentage (0 to 1), useful for percentile analysis.<br/>
 [✅ Formula: (rank - 1) / (total rows - 1)]
 
-🌐 Google Example: Ad Performance Percentile
-Google Ads wants to show advertisers how their CTR (click-through rate) compares to others.
+📌 🌐 Google Example: **Ad Performance Percentile**<br/>
+→ Google Ads wants to show advertisers how their CTR (click-through rate) compares to others.
 
 ```
 SELECT 
@@ -166,11 +220,11 @@ FROM ads;
 Result:
     - If performance_percentile = 0.85, your ad performs better than 85% of ads.
 
-👉 Why PERCENT_RANK()?
+👉 Why PERCENT_RANK()?<br/>
 It gives an intuitive "you're in the top X%" metric, perfect for dashboards and benchmarks.
 
-🛒 Amazon Example: Product Rating Distribution
-Show where a product’s rating falls in the overall distribution.
+📌 🛒 Amazon Example: **Product Rating Distribution**<br/>
+→ Show where a product’s rating falls in the overall distribution.
 
 ```
 PERCENT_RANK() OVER (ORDER BY avg_rating) AS rating_percentile
@@ -179,9 +233,12 @@ PERCENT_RANK() OVER (ORDER BY avg_rating) AS rating_percentile
 Helps answer: “Is this 4-star product above or below average?”
 
 
-### [6] **LAG(column, offset, default)**
 
-Usecase: When we want to access the value from a previous row in the result set.
+
+
+### [6] **LAG(column, offset, default)** → Compare with Previous Row
+
+Usecase: When we want to access the value from a previous row in the result set.<br/>
 [✅ It's critical for comparing current vs. past/future values — especially in time-series data.]
 
 ```
@@ -190,8 +247,8 @@ LAG(col, 2) → 2 rows back;
 LAG(col, 1, 0) → 1 row back, default to 0 if NULL
 ```
 
-🌐 Google Example: Daily Active Users (DAU) Growth
-Google wants to calculate day-over-day change in DAU.
+📌 🌐 Google Example: **Daily Active Users (DAU) Growth**<br/>
+→ Google wants to calculate day-over-day change in DAU.
 
 ```
 SELECT
@@ -203,11 +260,11 @@ SELECT
 FROM daily_metrics;
 ```
 
-👉 Why LAG()?
+👉 Why LAG()?<br/>
 To compare today’s DAU with yesterday’s — no self-joins needed. Clean, fast, and scalable.
 
-🛒 Amazon Example: Price Change Detection
-Amazon tracks product price history and wants to flag when a price changed.
+📌 🛒 Amazon Example: **Price Change Detection**<br/>
+→ Amazon tracks product price history and wants to flag when a price changed.
 
 ```
 SELECT
@@ -223,11 +280,11 @@ SELECT
 FROM product_pricing;
 ```
 
-👉 Why LAG()?
+👉 Why LAG()?<br/>
 To detect trends, discounts, or anomalies in pricing over time — useful for dynamic pricing engines or customer alerts.
 
-🚖 Uber Example: Driver Session Duration
-Uber wants to calculate time between consecutive trips for a driver (idle time).
+📌 🚖 Uber Example: **Driver Session Duration**<br/>
+→ Uber wants to calculate time between consecutive trips for a driver (idle time).
 
 ```
 SELECT
@@ -238,12 +295,15 @@ SELECT
 FROM trips;
 ```
 
-👉 Why LAG()?
+👉 Why LAG()?<br/>
 To understand driver availability, utilization, and fatigue — key for supply optimization.
 
-### [7] **LEAD(column, offset, default)**
 
-Usecase: When we want to access the value from a future row in the result set.
+
+
+### [7] **LEAD(column, offset, default)** → Compare with Next Row
+
+Usecase: When we want to access the value from a future row in the result set.<br/>
 [✅ It's critical for comparing current vs. past/future values — especially in time-series data.]
 
 ```
@@ -252,8 +312,8 @@ LEAD(col, 2) → 2 rows ahead
 LEAD(col, 1, 0) → 1 row ahead, default to 0 if NULL
 ```
 
-🌐 Google Example: Next Event Prediction (User Behavior)
-Google wants to see what users do after watching a video.
+📌 🌐 Google Example: **Next Event Prediction (User Behavior)**<br/>
+→ Google wants to see what users do after watching a video.
 
 ```
 SELECT
@@ -267,11 +327,11 @@ WHERE event_type = 'video_play';
 
 Result: Shows if user searched, shared, subscribed, or left after playing a video.
 
-👉 Why LEAD()?
+👉 Why LEAD()?<br/>
 For funnel analysis, churn prediction, or recommendation systems — understanding what comes next is gold.
 
-🛒 Amazon Example: Forecasting Stock Refilling
-Amazon wants to predict restocking needs by analyzing time between inventory drops.
+📌 🛒 Amazon Example: **Forecasting Stock Refilling**<br/>
+→ Amazon wants to predict restocking needs by analyzing time between inventory drops.
 
 ```
 SELECT
@@ -282,26 +342,26 @@ SELECT
 FROM inventory_logs;
 ```
 
-👉 Why LEAD()?
+👉 Why LEAD()?<br/>
 To analyze inventory decay rate and forecast future stockouts.
 
 
 
-🧭 Final Decision Tree (All 7 Functions)
+🧭 🔥Final Decision Tree (7 Functions)🔥
 
 ```
     Start
     │
-    ├─ Analyzing time-series or sequences? ──┬─ Need previous value? ────────────→ LAG()            [e.g. "What was yesterday’s revenue?"]
+    ├─ Analyzing time-series or sequences? ──┬─ Need previous row value? ────────→ LAG()            [e.g. "What was yesterday’s revenue?"]
     ├   (e.g., trends, changes, sessions)
-    │                                        ├─ Need next value? ────────────-───→ LEAD()           [e.g. "What’s the next event in the user journey?"]
+    │                                        ├─ Need next row value? ────────────→ LEAD()           [e.g. "What’s the next event in the user journey?"]
     │                                        └─ Need change/gap? ────────────-───→ LAG()/LEAD()
     │
-    └─ Ranking/grouping rows? ─────────────-┬─ Need unique row numbers? ─────────→ ROW_NUMBER()     [e.g. "Pick the first order per customer"]
+    └─ Ranking/grouping rows? ─────────────-┬─ Need unique row numbers per group?→ ROW_NUMBER()     [e.g. "Pick the first order per customer" (dedup/pick top)]
                                             ├─ Allow rank gaps after ties? ──────→ RANK()           [e.g. "Top 10 movies" where two #1s mean next is #3]
                                             ├─ No gaps in ranks? ────────────────→ DENSE_RANK()     [e.g. "Top 3 performers"]
                                             ├─ Split into equal buckets? ────────→ NTILE(n)         [e.g. "Quartiles (NTILE(4)), deciles (NTILE(10))"]
-                                            └─ Need percentile (0 to 1)? ────────→ PERCENT_RANK()   [e.g. "Your ad is in the 80th percentile"]
+                                            └─ Need percentile (0 to 1)? ────────→ PERCENT_RANK()   [e.g. "Your ad is in the 80th percentile" (0–1 relative position)]
 ```
 
 
