@@ -84,7 +84,7 @@ WHERE rn = 1;
 Amazon wants exactly one most recent order per customer — so ROW_NUMBER() is the right choice.
 
 
-
+📌 🚖 Uber Example: **Assigning Rider Support Tickets**<br/>
 → Suppose Uber wants to assign unique ticket IDs to customer support requests per city, ordered by timestamp.
 
 ```
@@ -94,6 +94,7 @@ SELECT
     ROW_NUMBER() OVER (PARTITION BY city ORDER BY request_time) AS ticket_id
 FROM support_requests;
 ```
+
 👉 Why ROW_NUMBER()?<br/>
 Even if two requests happen at the same time, they must get different ticket IDs (no duplicates). Uniqueness is key.
 
