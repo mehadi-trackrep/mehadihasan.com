@@ -118,11 +118,10 @@ SELECT
 FROM product_sales;
 ```
 
-Suppose two products tie for 1st place:
-
-    Product A: 500 units → Rank 1
-    Product B: 500 units → Rank 1
-    Product C: 400 units → Rank 3 (skips 2)
+Suppose two products tie for 1st place:<br/>
+    Product A: 500 units → Rank 1<br/>
+    Product B: 500 units → Rank 1<br/>
+    Product C: 400 units → Rank 3 (skips 2)<br/>
 
 👉 Why RANK()?<br/>
 It's okay to have gaps. The business wants to know: "Who are the top 3 ranked sold products?" and it's acceptable that there are 2 products in rank - 1 & no ranked 2 position. 
@@ -152,10 +151,10 @@ SELECT
 FROM sales_reps;
 ```
 
-If two reps tie for 1st:
-    Rep A: $100K → Rank 1
-    Rep B: $100K → Rank 1
-    Rep C: $90K → Rank 2
+If two reps tie for 1st:<br/>
+    Rep A: $100K → Rank 1<br/>
+    Rep B: $100K → Rank 1<br/>
+    Rep C: $90K  → Rank 2<br/>
 
 👉 Why DENSE_RANK()?<br/>
 We want a clean, intuitive ranking: “Top 3 performers” should mean 3 ranks (1, 2, 3), not skip numbers. Gaps (RANK()) would confuse users.
@@ -181,11 +180,11 @@ SELECT
 FROM drivers;
 ```
 
-Result:
-    Quartile 1: Top 25% performers
-    Quartile 2: Next 25%
-    ...
-    Quartile 4: Bottom 25%
+Result:<br/>
+Quartile 1: Top 25% performers<br/>
+Quartile 2: Next 25%<br/>
+...<br/>
+Quartile 4: Bottom 25%<br/>
 
 👉 Why NTILE(4)?<br/>
 For performance reviews, bonuses, or identifying underperformers, dividing into equal-sized buckets is more useful than ranks.
@@ -197,9 +196,9 @@ For performance reviews, bonuses, or identifying underperformers, dividing into 
 NTILE(10) OVER (ORDER BY daily_minutes) AS usage_decile
 ```
 
-Useful for:
-    - A/B testing (target top/bottom deciles)
-    - Identifying power users or churn risks
+Useful for:<br/>
+- A/B testing (target top/bottom deciles)<br/>
+- Identifying power users or churn risks<br/>
 
 
 ### [5] **PERCENT_RANK()** → Relative Performance
@@ -218,8 +217,8 @@ SELECT
 FROM ads;
 ```
 
-Result:
-    - If performance_percentile = 0.85, your ad performs better than 85% of ads.
+Result:<br/>
+If performance_percentile = 0.85, your ad performs better than 85% of ads.
 
 👉 Why PERCENT_RANK()?<br/>
 It gives an intuitive "you're in the top X%" metric, perfect for dashboards and benchmarks.
@@ -231,7 +230,7 @@ It gives an intuitive "you're in the top X%" metric, perfect for dashboards and 
 PERCENT_RANK() OVER (ORDER BY avg_rating) AS rating_percentile
 ```
 
-Helps answer: “Is this 4-star product above or below average?”
+Helps answer: “Is this **4-star** product above or below average?”
 
 
 
