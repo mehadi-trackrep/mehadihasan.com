@@ -119,14 +119,11 @@ function HeroSection() {
             </h1>
 
             {/** <!-- Sub-headline --> */}
-            <p className="flex w-full mx-auto max-w-2xl flex-wrap justify-center gap-4 text-lg text-gray-600 dark:text-gray-300 sm:text-xl lg:justify-start">
-              <span className="text-blue-500 font-bold">&lt;</span>
-
-              Passionate in building high-performance & scalable data pipelines and
+            {/** <!-- Sub-headline --> */}
+            <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
+              <span className="text-blue-500 font-bold">&lt;</span> Passionate in building high-performance & scalable data pipelines and
               implementing AI solutions. I specialize in Python, SQL, Elasticsearch, Scrapy, Playwright, API development, Athena and
-              AWS Services to drive data-driven decision-making.
-
-              <span className="text-purple-500 font-bold">/&gt;</span>
+              AWS Services to drive data-driven decision-making. <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
 
             {/** <!-- CTA Buttons --> */}
