@@ -132,9 +132,9 @@ function HeroSection() {
             {/** <!-- Sub-headline --> */}
             {/** <!-- Sub-headline --> */}
             <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
-              <span className="text-blue-500 font-bold">&lt;</span> Passionate in building high-performance & scalable data pipelines and
-              implementing AI solutions. I specialize in Python, SQL, Elasticsearch, Scrapy, Playwright, API development, Athena and
-              AWS Services to drive data-driven decision-making. <span className="text-purple-500 font-bold">/&gt;</span>
+              <span className="text-blue-500 font-bold">&lt;</span> Passionate about designing and optimizing high-performance, scalable data pipelines and implementing AI-driven solutions. 
+              Proficient in Python, SQL, Elasticsearch, Scrapy, Playwright, API development, Amazon Athena, and a broad range of AWS services, 
+              with a strong focus on enabling data-driven decision-making. <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
 
             {/** <!-- CTA Buttons --> */}
