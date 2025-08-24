@@ -1,5 +1,9 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import Typewriter from 'typewriter-effect';
+import styles from './HeroSection.module.css';
 
 function HeroSection() {
   return (
@@ -71,7 +75,14 @@ function HeroSection() {
             {/** <!-- Name Tag --> */}
             <div className="flex justify-center gap-4 lg:justify-start">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                👋 Hi, I&apos;m Md. Mehadi Hasan
+                <span className={styles.wave}>👋</span>&nbsp;&nbsp;Hi, I&apos;m&nbsp;&nbsp;
+                <Typewriter
+                  options={{
+                    strings: ['Md. Mehadi Hasan'],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </span>
 
               {/** <!-- Social Links --> */}
