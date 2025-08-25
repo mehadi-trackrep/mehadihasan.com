@@ -36,11 +36,9 @@ function Education({ title, gpa, org, time }: EducationProps) {
 
         <div className="text-sm text-zinc-700 dark:text-zinc-400">
           <LabelWithGraphic image={org.logo} content={org.name} />
-        </div>
-        <div className="text-sm text-zinc-700 dark:text-zinc-400">
-            <span className="font-bold text-zinc-900 dark:text-zinc-200">
-              CGPA: {gpa}
-            </span>
+                  
+            <span className="flex items-center gap-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGPA: {gpa} </span>
+
         </div>
       </div>
     </section>
