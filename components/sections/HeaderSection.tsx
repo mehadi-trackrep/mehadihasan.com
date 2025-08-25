@@ -15,7 +15,7 @@ type Props = {
 
 const summary = [
   '~5 years driving data-backend development, building scalable data pipelines & systems.',
-  'Proficient in Python, SQL, Elasticsearch (~5Y); AWS Services (~5Y); Scrapy, Kafka (~3Y)',
+  'Proficient in Python, SQL, Elasticsearch (~5Y); AWS Services (~5Y); Scrapy, Kafka (~3Y).',
   'Proven track record in optimizing large-scale ETL workflows and reducing infra costs.',
   'Hands-on experience in delivering AI-driven data solutions since 2023.',
 ];
@@ -26,7 +26,7 @@ export default function HeaderSection({ usage }: Props) {
   const leftColumn = () => (
     <div className="flex w-full flex-col items-center justify-center lg:w-[28%] lg:items-start lg:justify-start print:w-[28%] print:items-start print:justify-start">
       <div className="flex items-start justify-center lg:justify-start print:justify-start">
-        <h1 className="text-3xl font-bold text-black dark:text-white">
+        <h1 className="text-[23px] font-bold text-black dark:text-white">
           Md. Mehadi Hasan
         </h1>
         <div className="flex items-center mt-1 ml-3 text-zinc-900 dark:text-zinc-200">
@@ -49,7 +49,7 @@ export default function HeaderSection({ usage }: Props) {
           ))}
         </div>
       </div>
-      <h2 className="text-[22px] mb-3">Senior Software Engineer</h2>
+      <h2 className="text-[20px] mb-3">Senior Software Engineer</h2>
 
       <div className="space-y-2 text-zinc-800 dark:text-zinc-400">
         <Link

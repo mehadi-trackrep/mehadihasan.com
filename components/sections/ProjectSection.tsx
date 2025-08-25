@@ -31,14 +31,14 @@ export default function ProjectSection() {
       head1: (
         <TitleWithLink
           // image="/images/logos/tailwind.webp"
-          title="ETL: Athena to Elasticsearch & DynaoDB"
+          title="ETL: Athena to Elasticsearch & DynamoDB"
           link="https://github.com/mehadi-trackrep/etl-athena-to-es-dynamodb"
         />
       ),
       head2: <LabelWithGraphic icon={Icons.Stack} content="UV, Pydantic, Factory design pattern, SOLID principles" />,
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'An etl pipeline - fetch data from AWS Athena and store them into ES/OpenSearch & DynamoDB using `uv` package manager.',
+        'An etl pipeline - fetch data from AWS Athena and store them into ES/OpenSearch & DynamoDB using UV package manager.',
       ],
     },
     {
