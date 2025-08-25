@@ -25,7 +25,11 @@ export default function FilteredBlogs({ blogs, limit }: FilteredBlogsProps) {
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     blogs.forEach(blog => {
-      blog.tags.forEach(tag => tags.add(tag));
+      blog.tags.forEach(tag => {
+        if (tag) {
+          tags.add(tag);
+        }
+      });
     });
     return ['', ...Array.from(tags)];
   }, [blogs]);

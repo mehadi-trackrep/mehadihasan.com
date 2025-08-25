@@ -1,5 +1,9 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import Typewriter from 'typewriter-effect';
+import styles from './HeroSection.module.css';
 
 function HeroSection() {
   return (
@@ -12,21 +16,21 @@ function HeroSection() {
         {/** <!-- Animated SVG Patterns --> */}
         <div className="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 animate-[float_6s_ease-in-out_infinite]">
           <svg
-            viewBox="0 0 200 200"
+            viewBox="0 0 50 50"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-full"
           >
             <path
               fill="currentColor"
               className="text-gray-500/20 dark:text-blue-500/20"
-              d="M45.4,-51.6C58.3,-39.9,68,-24.7,71.1,-7.9C74.2,8.9,70.7,27.3,59.8,39.2C48.9,51.1,30.6,56.5,11.2,61.5C-8.2,66.5,-28.7,71.1,-43.5,63.3C-58.3,55.5,-67.4,35.4,-71.5,14.1C-75.6,-7.2,-74.7,-29.7,-63.3,-42.4C-51.9,-55.2,-30,-58.2,-10.7,-56.3C8.5,-54.4,32.5,-63.3,45.4,-51.6Z"
-              transform="translate(100 100)"
+              d="M18 30l18-10v20L18 50l-18-10v-20z"
+              transform="translate(10 10)"
             >
               <animateTransform
                 attributeName="transform"
                 type="rotate"
-                from="0 100 100"
-                to="360 100 100"
+                from="0 25 25"
+                to="360 25 25"
                 dur="20s"
                 repeatCount="indefinite"
               />
@@ -37,21 +41,21 @@ function HeroSection() {
         {/** <!-- Additional Decorative Elements --> */}
         <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-96 h-96 animate-[float_8s_ease-in-out_infinite]">
           <svg
-            viewBox="0 0 200 200"
+            viewBox="0 0 50 50"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-full"
           >
             <path
               fill="currentColor"
               className="text-purple-500/20 dark:text-purple-400/20"
-              d="M42.7,-62.2C50.9,-51.8,50.1,-34.5,51.7,-19.9C53.4,-5.3,57.4,7.6,54.9,19.1C52.4,30.6,43.2,40.8,32.1,47.9C21,55,7.9,59,-5.5,57.6C-18.9,56.2,-32.5,49.3,-43.5,39.2C-54.5,29,-62.9,15.5,-65.1,0.7C-67.3,-14.1,-63.3,-30.5,-52.8,-41.1C-42.3,-51.7,-25.4,-56.5,-8.2,-56.8C9,-57.1,34.5,-72.7,42.7,-62.2Z"
-              transform="translate(100 100)"
+              d="M18 30l18-10v20L18 50l-18-10v-20z"
+              transform="translate(10 10)"
             >
               <animateTransform
                 attributeName="transform"
                 type="rotate"
-                from="360 100 100"
-                to="0 100 100"
+                from="360 25 25"
+                to="0 25 25"
                 dur="15s"
                 repeatCount="indefinite"
               />
@@ -71,7 +75,14 @@ function HeroSection() {
             {/** <!-- Name Tag --> */}
             <div className="flex justify-center gap-4 lg:justify-start">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-                👋 Hi, I&apos;m Md. Mehadi Hasan
+                <span className={styles.wave}>👋</span>&nbsp;&nbsp;Hi, I&apos;m&nbsp;&nbsp;
+                <Typewriter
+                  options={{
+                    strings: ['Md. Mehadi Hasan'],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </span>
 
               {/** <!-- Social Links --> */}
@@ -119,10 +130,11 @@ function HeroSection() {
             </h1>
 
             {/** <!-- Sub-headline --> */}
-            <p className="flex w-full mx-auto max-w-2xl flex-wrap justify-center gap-4 text-lg text-gray-600 dark:text-gray-300 sm:text-xl lg:justify-start">
-              Passionate in building scalable data pipelines and
-              implementing AI solutions. I specialize in Python, SQL, Elasticsearch, Scrapy, Playwright, API development, Athena and
-              AWS Services to drive data-driven decision-making.
+            {/** <!-- Sub-headline --> */}
+            <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
+              <span className="text-blue-500 font-bold">&lt;</span> Passionate about designing and optimizing high-performance, scalable data pipelines and implementing AI-driven solutions. 
+              Proficient in Python, SQL, Elasticsearch, Scrapy, Playwright, API development, Amazon Athena, and a broad range of AWS services, 
+              with a strong focus on enabling data-driven decision-making. <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
 
             {/** <!-- CTA Buttons --> */}

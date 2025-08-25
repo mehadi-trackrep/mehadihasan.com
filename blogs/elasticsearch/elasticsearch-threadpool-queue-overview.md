@@ -1,7 +1,7 @@
 ---
 title: 'Demystifying Elasticsearch Threadpool & Queue'
 date: '2025-08-03'
-description: 'When a client initiates a search or indexing request to Elasticsearch, the system follows a defined sequence of processing steps. Do you know why what are the steps?'
+description: 'When a data node receives a request—such as a search query—it attempts to process the request by allocating an available thread from the corresponding thread pool. If all threads in the pool are currently in use, the request is enqueued in the associated wait queue, where it remains until a thread becomes available for processing.'
 cover_image: '/images/blogs/elasticsearch/elasticsearch-threadpool-queue-overview.webp'
 categories:
   - aws
