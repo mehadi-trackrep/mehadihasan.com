@@ -6,49 +6,49 @@ import TitleWithLink from '@/components/resume/TitleWithLink';
 
 const certificates: CertificateProps[] = [
   {
-    title: 'Front End Libraries',
+    title: 'SQL (Advanced) Certificate - HackerRank',
     org: {
       name: '',
       logo: '',
     },
-    time: '2009 - 2014',
-    link: 'https://github.com/sajibcse68/certificates#front-end-libraries',
+    time: '2023 - ',
+    link: 'https://www.hackerrank.com/certificates/f3ef0110e659',
   },
   {
-    title: 'Git in Depth',
+    title: 'Scientific Computing with Python',
     org: {
       name: '',
       logo: '',
     },
-    time: '2009 - 2014',
-    link: 'https://github.com/sajibcse68/certificates#git-in-depth',
+    time: '2023 - ',
+    link: 'https://www.freecodecamp.org/certification/mehadi_sust/scientific-computing-with-python-v7',
   },
   {
-    title: 'JavaScript Algorithms and DataStructures Cert',
+    title: 'Understanding and Visualizing Data with Python',
     org: {
       name: '',
       logo: '',
     },
-    time: '2009 - 2014',
-    link: 'https://github.com/sajibcse68/certificates#javascript-algorithms-and-datastructures-certification',
+    time: '2020 - ',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/WFYBF6VSFBH3',
   },
   {
-    title: 'EXPERT in JavaScript - @Pluralsight',
+    title: 'Neural Networks and Deep Learning',
     org: {
       name: '',
       logo: '',
     },
-    time: '2009 - 2014',
-    link: 'https://github.com/sajibcse68/certificates#expert-in-javascript----skill-assessment-at-pluralsight',
+    time: '2020 - ',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/YDBBF7U3JJEA',
   },
   {
-    title: 'Modern React with Redux',
+    title: 'Data Science Math Skills',
     org: {
       name: '',
       logo: '',
     },
-    time: '2009 - 2014',
-    link: 'https://github.com/sajibcse68/certificates#modern-react-with-redux',
+    time: '2020 - ',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/QC4JNTGVFPQT',
   },
 ];
 

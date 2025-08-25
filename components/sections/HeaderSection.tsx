@@ -14,7 +14,7 @@ type Props = {
 };
 
 const summary = [
-  '4.5+ years driving data-backend development, building scalable data pipelines & systems.',
+  '~5 years driving data-backend development, building scalable data pipelines & systems.',
   'Expert in Python, SQL, Elasticsearch (~5Y); AWS Services (~5Y); Scrapy, Kafka (~3Y).',
   'Proven track record in optimizing large-scale ETL workflows, reducing infra costs.',
   'Consistent experience in delivering AI-driven data solutions since 2023.',

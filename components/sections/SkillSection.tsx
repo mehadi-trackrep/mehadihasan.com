@@ -19,7 +19,11 @@ export default function SkillSection() {
     'Pytest',
     'FastAPI',
     'LLM',
-    'Langchain'
+    'Langchain',
+    'Git',
+    'UV',
+    'Celery',
+    'N8N'
   ];
 
   const stackOverflowBadges = [
