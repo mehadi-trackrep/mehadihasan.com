@@ -32,7 +32,7 @@ export default function ProjectSection() {
         <TitleWithLink
           // image="/images/logos/tailwind.webp"
           title="ETL: Athena to Elasticsearch & DynaoDB"
-          link="https://github.com/sajibcse68/css-advanced-animations"
+          link="https://github.com/mehadi-trackrep/etl-athena-to-es-dynamodb"
         />
       ),
       head2: <LabelWithGraphic icon={Icons.Stack} content="UV, Pydantic, Factory design pattern, SOLID principles" />,
