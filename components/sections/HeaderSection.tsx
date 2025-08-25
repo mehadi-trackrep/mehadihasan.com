@@ -14,10 +14,10 @@ type Props = {
 };
 
 const summary = [
-  '10+ years driving frontend development, developing scalable web applications.',
-  'Expert in JavaScript (10Y), React/Redux (7Y), TypeScript/Next.js (5Y), Modern CSS & Git.',
-  'Proven track record in resolving complex issues through debugging and optimization.',
-  'Consistent experience working with USA, UK, and European companies since 2019.',
+  '4.5+ years driving data-backend development, building scalable data pipelines & systems.',
+  'Expert in Python, SQL, Elasticsearch (~5Y); AWS Services (~5Y); Scrapy, Kafka (~3Y).',
+  'Proven track record in optimizing large-scale ETL workflows, reducing infra costs.',
+  'Consistent experience in delivering AI-driven data solutions since 2023.',
 ];
 
 export default function HeaderSection({ usage }: Props) {

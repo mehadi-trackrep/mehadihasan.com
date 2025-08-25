@@ -11,6 +11,7 @@ export default function SkillSection() {
     'Playwright',
     'PySpark',
     'Kafka',
+    'Airflow',
     'Pandas',
     'Iceberg',
     'Crawl4ai',
@@ -18,9 +19,7 @@ export default function SkillSection() {
     'Pytest',
     'FastAPI',
     'LLM',
-    'Langchain',
-    'n8n',
-    'Git',
+    'Langchain'
   ];
 
   const stackOverflowBadges = [
@@ -55,57 +54,6 @@ export default function SkillSection() {
           </ul>
         </div>
       </Section>
-
-      {/* <div className="mt-10 hidden h-[130px] w-1 border-2 border-gray-300 lg:block print:block" /> */}
-
-      {/* <div className="pl-0 mt-4 w-full lg:w-auto print:w-auto">
-        <h2 className="text-lg">StackOverflow</h2>
-
-        <div className="flex justify-between items-center font-bold border-b-2 border-gray-300">
-          <p className="text-lg">24k &nbsp;&nbsp;</p>
-
-          <ul className="flex gap-1">
-            {stackOverflowBadges.map(({ name, value, color }) => (
-              <li key={name}>
-                <span
-                  style={{ background: `${color}` }}
-                  className={`w-3 h-3 rounded-full inline-flex items-center justify-center text-xl font-bold`}
-                />
-                &nbsp;{value}&nbsp;
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-1">
-          <div className="space-y-2">
-            <div className="flex flex-col gap-0">
-              <div className="flex w-full items-center justify-between px-2 text-xs">
-                <p>(Tags)</p>
-                <p>(Score)</p>
-              </div>
-              <div className="flex w-full items-center justify-between px-3 text-sm font-bold">
-                <FaGit
-                  size="22"
-                  className=" text-zinc-700 dark:text-zinc-300"
-                />
-                <p>1403</p>
-              </div>
-              <div className="flex w-full items-center justify-between px-3 text-sm font-bold">
-                <FaJs size="22" className=" text-zinc-700 dark:text-zinc-300" />
-                <p>171</p>
-              </div>
-              <div className="flex w-full items-center justify-between px-3 text-sm font-bold">
-                <FaReact
-                  size="22"
-                  className=" text-zinc-700 dark:text-zinc-300"
-                />
-                <p>210</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

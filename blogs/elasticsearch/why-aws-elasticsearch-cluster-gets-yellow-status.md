@@ -49,6 +49,7 @@ categories:
  * And as a general rule of thumb, we should have fewer than 3000 indices per GB of heap on master nodes.
 
 If we don't follow best practices, the cluster can become unstable. This instability can cause the cluster status to change from **green** to **yellow** or *even* **red**. This happens when one or more replica shards are in an unassigned state.
+
 ℹ️ Every data node sends its **heartbeat** to master nodes. When the master node misses a few heartbeats, it assumes the node has failed, marks it as dead, and immediately unassigns all shards that were on it (both primary and replica). Shard allocation is a very high-priority task for the master node. It immediately starts re-assigning the shards back to the newly available node. And when`the JVM memory pressure gets very high that means the GC gets paused for a long time which stops the node to send heartbeat to the master nodes`.
 
 > When does one or more shard get unassigned?

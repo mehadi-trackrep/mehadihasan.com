@@ -70,9 +70,10 @@ function NavLink({
 
   // Check if this is the resume link
   const isResumeLink = href === '/resume';
-  const linkHref = isResumeLink 
-    ? 'https://docs.google.com/document/d/1BE9g9QXOK4do0nDGU3f4U25GRd3ufss8uZCSnNaOX0k/edit?usp=sharing'
-    : href;
+  const linkHref = href;
+  // const linkHref = isResumeLink 
+  //   ? 'https://docs.google.com/document/d/1BE9g9QXOK4do0nDGU3f4U25GRd3ufss8uZCSnNaOX0k/edit?usp=sharing'
+  //   : href;
 
   return (
     <li className="list-none px-5 py-2">
@@ -87,7 +88,7 @@ function NavLink({
           }
         )}
         href={linkHref}
-        target={isResumeLink ? '_blank' : undefined}
+        // target={isResumeLink ? '_blank' : undefined}
         rel={isResumeLink ? 'noopener noreferrer' : undefined}
         {...rest}
       />
