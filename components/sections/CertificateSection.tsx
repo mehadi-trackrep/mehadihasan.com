@@ -76,12 +76,12 @@ export default function CertificateSection() {
         ))}
       </div>
 
-      <div className="absolute right-[8%] top-0 mt-1 text-sm font-bold">
+      {/* <div className="absolute right-[8%] top-0 mt-1 text-sm font-bold">
         <TitleWithLink
           title="(check over 50 cert?)"
           link="https://github.com/sajibcse68/certificates"
         />
-      </div>
+      </div> */}
     </Section>
   );
 }

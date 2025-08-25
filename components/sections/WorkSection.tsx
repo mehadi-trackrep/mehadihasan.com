@@ -27,7 +27,7 @@ const exp: ExperienceProps[] = [
        & metadata indexing pipeline processing 2M+ company records daily, improving data retrieval speed by 28.6% and reducing query response time \
        from 800ms to 570ms. This is 60% of the total system’s data (222M+).',
 
-      'Built automated designation categorization system using GPT-4 API, reducing manual categorization effort by 40% and processing 10K+ designations\
+      'Implemented automated designation categorization system using GPT-4 API, reducing manual categorization effort by 40% and processing 10K+ designations\
        weekly with 94% accuracy.',
 
       'Optimized AWS infrastructure costs by 43% ($6.5K monthly savings) through Elasticsearch query optimization and S3 access pattern improvements, \
