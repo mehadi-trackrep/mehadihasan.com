@@ -23,10 +23,18 @@ const exp: ExperienceProps[] = [
     ),
     head4: '03/25 - Pres.',
     bulletPoints: [
-      'Led a full UI/UX revamp that boosted application performance by 30% via React optimization, lazy loading and render blocking minimization.',
-      'Architected a scalable system using React, Redux, Next.js & TypeScript.',
-      'Delivered pixel-perfect, responsive interfaces from Figma designs using modern CSS methodologies.',
-      'Mentored a 4-member frontend team, improving sprint velocity by 40%.',
+      'Architected a core company data (financial reports, geographical location, corporate structure, industrial categories, URLs, situation, persons, etc.)\
+       & metadata indexing pipeline processing 2M+ company records daily, improving data retrieval speed by 28.6% and reducing query response time \
+       from 800ms to 570ms. This is 60% of the total system’s data (222M+).',
+
+      'Built automated designation categorization system using GPT-4 API, reducing manual categorization effort by 40% and processing 10K+ designations\
+       weekly with 94% accuracy.',
+
+      'Optimized AWS infrastructure costs by 43% ($6.5K monthly savings) through Elasticsearch query optimization and S3 access pattern improvements, \
+      reducing sync operation time by 86%.',
+
+      'LLM based customer profile enrichment system, enhancing customer profiles with 15+ attributes, leading to a 12% increase in lead conversion rates.',
+
       'Collaborated with cross-functional teams to launch seven high-impact product features.',
     ],
   },
@@ -45,11 +53,14 @@ const exp: ExperienceProps[] = [
     ),
     head4: '10/22 - 03/25',
     bulletPoints: [
-      'Designed and developed 100+ reusable React components across SaaS app.',
-      'Developed and enhanced modern web applications using React, Context API, GraphQL, ES6+ & Styled-components, ensuring clean and maintainable code.',
-      'Developed interactive data visualizations with D3.js while maintaining smooth user experience.',
-      'Migrated APIs from REST to GraphQL using Axios, AWS AppSync & Normalizr, improving API efficiency, flexibility, and reducing load time by 20%.',
-      'Manage the frontend team in an Agile environment, fostering collaboration and maintaining productivity.',
+      'Developed an innovative company matching service for large file imports by users using AWS ElasticSearch, where users can perform \
+      the CRM sync operations.',
+
+      'Participated in developing an event bus system in the Pub/Sub model to process the user request events.',
+
+      'Developed a recruitment data pipeline to extract job postings from recruitment sites, such as Indeed.com.',
+
+      'Built a keyword extraction tool and exposed it as an API for getting each company’s activity texts.',
     ],
   },
   {
@@ -67,11 +78,13 @@ const exp: ExperienceProps[] = [
     ),
     head4: '11/20 - 10/22',
     bulletPoints: [
-      'Designed and developed 100+ reusable React components across SaaS app.',
-      'Developed and enhanced modern web applications using React, Context API, GraphQL, ES6+ & Styled-components, ensuring clean and maintainable code.',
-      'Developed interactive data visualizations with D3.js while maintaining smooth user experience.',
-      'Migrated APIs from REST to GraphQL using Axios, AWS AppSync & Normalizr, improving API efficiency, flexibility, and reducing load time by 20%.',
-      'Manage the frontend team in an Agile environment, fostering collaboration and maintaining productivity.',
+      'Developed collaborative filtering tool for finding similarities on some specific dimensions of data among the users’ set of \
+      companies’ data.',
+
+      'Developed a dashboard and alert system using Grafana for the logs and metadata of several data pipelines. We integrated it into \
+      the Slack channel to notify us for any internal incidents.',
+
+      'Done a couple of data modeling and schema design tasks for MySQL, Athena with Iceberg tables, and ElasticSearch.',
     ],
   },
 ];

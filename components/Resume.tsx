@@ -55,7 +55,7 @@ const ResumeNew = React.forwardRef(({ usage }: Props, ref) => {
       {/* Bottom Section */}
       <AdditionalSkills />
 
-      <p className="absolute bottom-0 right-0 mb-[-20px] mr-2">v7.2.0</p>
+      <p className="absolute bottom-0 right-2">v7.2.0</p>
     </div>
   );
 });
