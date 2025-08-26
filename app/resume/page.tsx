@@ -36,7 +36,7 @@ export default function ResumePage() {
             </div>
 
             <div>
-              <div className="absolute right-4 top-4 m-0 mx-auto flex justify-center md:flex lg:right-12 print:flex">
+              <div className="absolute right-4 top-4 m-0 mx-auto hidden justify-center md:flex lg:right-12 print:flex">
                 <ActionButton
                   text="Download Resume"
                   className="block"
