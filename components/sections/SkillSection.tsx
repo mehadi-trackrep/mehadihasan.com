@@ -23,7 +23,7 @@ export default function SkillSection() {
     'Git',
     'UV',
     'Celery',
-    'N8N'
+    'LangGraph'
   ];
 
   const stackOverflowBadges = [

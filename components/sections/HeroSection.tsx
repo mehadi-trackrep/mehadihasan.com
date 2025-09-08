@@ -133,8 +133,8 @@ function HeroSection() {
             {/** <!-- Sub-headline --> */}
             <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
               <span className="text-blue-500 font-bold">&lt;</span> Passionate about designing and optimizing high-performance, scalable data pipelines and implementing AI-driven solutions. 
-              Proficient in Python, SQL, Elasticsearch/OpenSearch, Scrapy, Playwright, API development, Amazon Athena, and a broad range of AWS services, 
-              with a strong focus on enabling data-driven decision-making. <span className="text-purple-500 font-bold">/&gt;</span>
+              Proficient in Python, SQL, Elasticsearch/OpenSearch, Scrapy, Selenium, Playwright, Crawl4ai, API development, Amazon Athena-Glue, and a broad range of AWS services, 
+              with a strong focus on enabling data-driven decision-making. Exploring the LLM and AI tech stacks - Llama.cpp, CrewAI, LangGraph, etc. <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
 
             {/** <!-- CTA Buttons --> */}
