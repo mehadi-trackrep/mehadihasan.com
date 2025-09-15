@@ -35,7 +35,7 @@ const exp: ExperienceProps[] = [
 
       'LLM based customer profile enrichment system, enhancing customer profiles with 15+ attributes, leading to a 12% increase in lead conversion rates.',
 
-      'Collaborated with cross-functional teams to launch seven high-impact product features.',
+      'NER based company extraction & news tags detection tool with improving data extraction accuracy by 25% and reducing elasticsearch pressure by 38%.',
     ],
   },
   {
