@@ -30,7 +30,7 @@ const exp: ExperienceProps[] = [
       'Implemented automated designation categorization system using GPT-4 API, reducing manual categorization effort by 40% and processing 10K+ designations\
        weekly with 94% accuracy.',
 
-      'Optimized AWS infrastructure costs by 43% ($6.5K monthly savings) through Elasticsearch query optimization and S3 access pattern improvements, \
+      'Optimized AWS infrastructure costs by 43% through Elasticsearch query optimization and S3 access pattern improvements, \
       reducing sync operation time by 86%.',
 
       'LLM based customer profile enrichment system, enhancing customer profiles with 15+ attributes, leading to a 12% increase in lead conversion rates.',
