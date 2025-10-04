@@ -5,7 +5,7 @@ description: 'AWS OpenSearch (formerly Elasticsearch) manages each node’s memo
 cover_image: '/images/blogs/elasticsearch/elasticsearch-node-memory-storage-layout.png'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - RAM
   - JVM Heap
   - JVM & OS Caches

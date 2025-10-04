@@ -5,7 +5,7 @@ description: 'It is must required to know about AWS EC2 and Elasticsarch storage
 cover_image: '/images/blogs/elasticsearch/ec2-elasticsarch-storage-jvm-memory.webp'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - ec2 storage
   - jvm memory
 ---

@@ -5,7 +5,7 @@ description: 'Do you know why the 𝗣𝗿𝗼𝘃𝗶𝘀𝗶𝗼𝗻𝗲𝗱 �
 cover_image: '/images/blogs/elasticsearch/provisioned-throughput-and-iops-in-elasticsearch.webp'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - throughput
   - iops
 ---

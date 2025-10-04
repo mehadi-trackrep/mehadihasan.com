@@ -5,7 +5,7 @@ description: 'When a client initiates a search or indexing request to Elasticsea
 cover_image: '/images/blogs/elasticsearch/elasticsearch-end-to-end-request-process-flow.webp'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - coordinating node
 ---
 

@@ -5,7 +5,7 @@ description: 'When a data node receives a request—such as a search query—it 
 cover_image: '/images/blogs/elasticsearch/elasticsearch-threadpool-queue-overview.webp'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - coordinating node
 ---
 

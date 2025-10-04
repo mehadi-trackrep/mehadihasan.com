@@ -6,7 +6,7 @@ description: 'We need to use field data caching to utilize fast aggregation and 
 cover_image: '/images/blogs/elasticsearch/how-to-reduce-reliance-on-fielddata-cache.png'
 categories:
   - aws
-  - elasticsearh
+  - elasticsearch
   - fielddata cache
   - doc_value
 ---
