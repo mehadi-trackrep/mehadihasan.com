@@ -6,9 +6,9 @@ export default function SkillSection() {
   const topSkills = [
     'Python',
     'SQL',
-    'AWS ES',
+    'Elasticsearch',
     'Scrapy',
-    'Playwright',
+    'DBT',
     'PySpark',
     'Kafka',
     'Airflow',
@@ -17,13 +17,13 @@ export default function SkillSection() {
     'Crawl4ai',
     'Pydantic',
     'Pytest',
+    'Playwright',
     'FastAPI',
     'LLM',
-    'Langchain',
+    'MCP',
     'Git',
     'UV',
-    'Celery',
-    'LangGraph'
+    'Celery'
   ];
 
   const stackOverflowBadges = [
@@ -51,9 +51,9 @@ export default function SkillSection() {
         title="SKILLS"
       >
         <div className="space-y-2">
-          <ul className="grid grid-cols-4 gap-x-1 gap-y-1">
+          <ul className="grid grid-cols-[repeat(4,max-content)] gap-x-3 gap-y-1">
             {topSkills.map((skill) => (
-              <li key={skill}>•&nbsp; {skill}</li>
+              <li key={skill} className="whitespace-nowrap">•&nbsp; {skill}</li>
             ))}
           </ul>
         </div>

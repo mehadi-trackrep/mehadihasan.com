@@ -6,6 +6,24 @@ import TitleWithLink from '@/components/resume/TitleWithLink';
 
 const certificates: CertificateProps[] = [
   {
+    title: 'Big Data Fundamentals with PySpark',
+    org: {
+      name: '',
+      logo: '',
+    },
+    time: '2026 - ',
+    link: 'https://www.datacamp.com/statement-of-accomplishment/course/063b85cd92a4776557238404d56f7ee28d3a16f0?raw=1',
+  },
+  {
+    title: 'Intermediate DBT',
+    org: {
+      name: '',
+      logo: '',
+    },
+    time: '2026 - ',
+    link: 'https://www.datacamp.com/statement-of-accomplishment/course/a136dd06707d348d078a3704417c7dbb4421dbb3?raw=1',
+  },
+  {
     title: 'SQL (Advanced) Certificate - HackerRank',
     org: {
       name: '',
@@ -13,15 +31,6 @@ const certificates: CertificateProps[] = [
     },
     time: '2023 - ',
     link: 'https://www.hackerrank.com/certificates/f3ef0110e659',
-  },
-  {
-    title: 'Scientific Computing with Python',
-    org: {
-      name: '',
-      logo: '',
-    },
-    time: '2023 - ',
-    link: 'https://www.freecodecamp.org/certification/mehadi_sust/scientific-computing-with-python-v7',
   },
   {
     title: 'Understanding and Visualizing Data with Python',
@@ -40,16 +49,7 @@ const certificates: CertificateProps[] = [
     },
     time: '2020 - ',
     link: 'https://www.coursera.org/account/accomplishments/certificate/YDBBF7U3JJEA',
-  },
-  {
-    title: 'Data Science Math Skills',
-    org: {
-      name: '',
-      logo: '',
-    },
-    time: '2020 - ',
-    link: 'https://www.coursera.org/account/accomplishments/certificate/QC4JNTGVFPQT',
-  },
+  }
 ];
 
 function Certificate({ title, link, org, time }: CertificateProps) {

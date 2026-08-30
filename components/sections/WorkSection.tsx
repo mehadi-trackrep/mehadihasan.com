@@ -23,19 +23,15 @@ const exp: ExperienceProps[] = [
     ),
     head4: '03/25 - Pres.',
     bulletPoints: [
-      'Architected a core company data (financial reports, geographical location, corporate structure, industrial categories, URLs, situation, persons, etc.)\
-       & metadata indexing pipeline processing 2M+ company records daily, improving data retrieval speed by 28.6% and reducing query response time \
-       from 800ms to 570ms. This is 60% of the total system’s data (222M+).',
+      'Built and shipped an MCP (Model Context Protocol) server that lets users query and act on company data in natural language from their own MCP client (Claude, ChatGPT, etc.), cutting manual effort by ~90% on key workflows via intelligent auto tool-calling.',
 
-      'Implemented automated designation categorization system using GPT-4 API, reducing manual categorization effort by 40% and processing 10K+ designations\
-       weekly with 94% accuracy.',
+      'Architected a core company data (financial reports, geographical location, corporate structure, industrial categories, URLs, situation, persons, etc.) & metadata indexing pipeline processing 2M+ company records daily, improving data retrieval speed by 28.6% and reducing query response time from 800ms to 570ms across 60% of the total system’s data (222M+).',
 
-      'Optimized AWS infrastructure costs by 43% through Elasticsearch query optimization and S3 access pattern improvements, \
-      reducing sync operation time by 86%.',
+      'Optimized AWS infrastructure costs by 43% through Elasticsearch query optimization and S3 access pattern improvements, reducing sync operation time by 86%.',
 
-      'LLM based customer profile enrichment system, enhancing customer profiles with 15+ attributes, leading to a 12% increase in lead conversion rates.',
+      'Built an LLM-based customer profile enrichment system, adding 15+ attributes per profile and driving a 12% increase in lead conversion rates.',
 
-      'NER based company extraction & news tags detection tool with improving data extraction accuracy by 25% and reducing elasticsearch pressure by 38%.',
+      'Developed an NER-based company extraction & news tags detection tool, improving data extraction accuracy by 25% and reducing Elasticsearch load by 38%.',
     ],
   },
   {
@@ -53,14 +49,13 @@ const exp: ExperienceProps[] = [
     ),
     head4: '10/22 - 03/25',
     bulletPoints: [
-      'Developed an innovative company matching service for large file imports by users using AWS ElasticSearch, where users can perform \
-      the CRM sync operations.',
+      'Built a company matching service using AWS Elasticsearch to support large-scale user file imports and downstream CRM sync operations.',
 
-      'Participated in developing an event bus system in the Pub/Sub model to process the user request events.',
+      'Co-developed a Pub/Sub-based event bus system to process and route user request events across services.',
 
-      'Developed a recruitment data pipeline to extract job postings from recruitment sites, such as Indeed.com.',
+      'Developed a recruitment data pipeline to extract and normalize job postings from recruitment sites such as Indeed.com.',
 
-      'Built a keyword extraction tool and exposed it as an API for getting each company’s activity texts.',
+      'Built a keyword extraction tool and exposed it as an API for retrieving each company’s activity texts.',
     ],
   },
   {
@@ -78,13 +73,11 @@ const exp: ExperienceProps[] = [
     ),
     head4: '11/20 - 10/22',
     bulletPoints: [
-      'Developed collaborative filtering tool for finding similarities on some specific dimensions of data among the users’ set of \
-      companies’ data.',
+      'Developed a collaborative filtering tool to find similarities across specific data dimensions among users’ sets of company data.',
 
-      'Developed a dashboard and alert system using Grafana for the logs and metadata of several data pipelines. We integrated it into \
-      the Slack channel to notify us for any internal incidents.',
+      'Built a Grafana dashboard and alerting system for logs and metadata across several data pipelines, integrated with Slack to notify the team of internal incidents.',
 
-      'Done a couple of data modeling and schema design tasks for MySQL, Athena with Iceberg tables, and ElasticSearch.',
+      'Performed data modeling and schema design for MySQL, Athena with Iceberg tables, and Elasticsearch.',
     ],
   },
 ];
