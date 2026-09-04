@@ -1,61 +1,55 @@
-import { FaGit, FaJs, FaReact } from 'react-icons/fa';
-
 import Section from './Section';
 
 export default function SkillSection() {
-  const topSkills = [
-    'Python',
-    'SQL',
-    'Elasticsearch',
-    'Scrapy',
-    'DBT',
-    'PySpark',
-    'Kafka',
-    'Airflow',
-    'Pandas',
-    'Iceberg',
-    'Crawl4ai',
-    'Pydantic',
-    'Pytest',
-    'Playwright',
-    'FastAPI',
+  const aiSkills = [
     'LLM',
+    'RAG',
+    'llama.cpp',
     'MCP',
-    'Git',
-    'UV',
-    'Celery'
+    'NER',
+    'Prompt Engineering',
+    'Function/Tool Calling',
+    'Crawl4ai',
+    'PyTorch',
+    'Python',
+    'FastAPI',
   ];
 
-  const stackOverflowBadges = [
-    {
-      name: 'gold',
-      value: 9,
-      color: '#FFCC00',
-    },
-    {
-      name: 'silver',
-      value: 68,
-      color: '#B4B8BC',
-    },
-    {
-      name: 'bronze',
-      value: 79,
-      color: '#D1A684',
-    },
+  const coreSkills = [
+    'Elasticsearch/OpenSearch',
+    'SQL',
+    'AWS',
+    'Pydantic',
+    'Celery',
+    'Pandas',
+    'Scrapy',
+    'Playwright',
+    'Git',
+    'Pytest',
   ];
+
+  const alsoFamiliar = ['DBT', 'PySpark', 'Kafka', 'Airflow', 'Iceberg'];
 
   return (
-    <div className="flex w-full max-w-xs flex-col items-start justify-between lg:w-auto lg:max-w-none lg:flex-row print:max-w-none print:flex-row">
+    <div className="w-full">
       <Section
-        classes="text-zinc-900 w-full lg:w-auto print:w-auto dark:text-zinc-200"
+        classes="text-zinc-900 w-full dark:text-zinc-200"
         title="SKILLS"
       >
-        <div className="space-y-2">
-          <ul className="grid grid-cols-[repeat(4,max-content)] gap-x-3 gap-y-1">
-            {topSkills.map((skill) => (
+        <div className="space-y-1">
+          <ul className="flex flex-wrap gap-x-3 gap-y-1">
+            {aiSkills.map((skill) => (
               <li key={skill} className="whitespace-nowrap">•&nbsp; {skill}</li>
             ))}
           </ul>
+          <ul className="flex flex-wrap gap-x-3 gap-y-1">
+            {coreSkills.map((skill) => (
+              <li key={skill} className="whitespace-nowrap">•&nbsp; {skill}</li>
+            ))}
+          </ul>
+          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+            Also familiar: {alsoFamiliar.join(', ')}
+          </p>
         </div>
       </Section>
     </div>

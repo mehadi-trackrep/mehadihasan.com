@@ -10,35 +10,14 @@ export default function ProjectSection() {
   const exp: ExperienceProps[] = [
     {
       head1: (
-        <TitleWithLink
-          // image="/images/logos/nextjs.png"
-          title="Booking-Agoda Hotel Scraper"
-          link="https://github.com/mehadi-trackrep/booking-agoda-hotel-scraper"
-        />
-      ),
-      head2: (
         <LabelWithGraphic
-          icon={Icons.Stack}
-          content="Scrapy, Celery, Playwright, Redis, Docker"
+          content="RAG Search POC — Companies, News & Recruitment (Client)"
         />
       ),
+      head2: <LabelWithGraphic icon={Icons.Stack} content="Elasticsearch, LLM, RAG, Python, FastAPI" />,
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'An effective hotel search web app which fetches the hotel info from booking.com and agoda.com based on user input and shows the best matches.',
-      ],
-    },
-    {
-      head1: (
-        <TitleWithLink
-          // image="/images/logos/tailwind.webp"
-          title="ETL: Athena to Elasticsearch & DynamoDB"
-          link="https://github.com/mehadi-trackrep/etl-athena-to-es-dynamodb"
-        />
-      ),
-      head2: <LabelWithGraphic icon={Icons.Stack} content="UV, Pydantic, Factory design pattern, SOLID principles" />,
-      head3: <LabelWithGraphic icon={Icons.Star} content="" />,
-      bulletPoints: [
-        'An etl pipeline - fetch data from AWS Athena and store them into ES/OpenSearch & DynamoDB using UV package manager.',
+        'Built a proof-of-concept RAG pipeline over our Elasticsearch data (companies, news, recruitment), letting clients search in natural language and get real-time, single-view summarized answers instead of manual keyword digging.',
       ],
     },
     {

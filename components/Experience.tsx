@@ -18,7 +18,7 @@ export default function Experience({
         <span>{head4}</span>
       </div>
 
-      <ul className="text-base leading-[26px] list-disc ml-4 text-zinc-700 dark:text-zinc-400">
+      <ul className="text-base leading-[22px] list-disc ml-4 text-zinc-700 dark:text-zinc-400">
         {bulletPoints.map((point, index) => (
           <li key={index}>{point}</li>
         ))}

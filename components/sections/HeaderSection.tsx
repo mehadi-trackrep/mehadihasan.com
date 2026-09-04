@@ -14,10 +14,10 @@ type Props = {
 };
 
 const summary = [
-  '5+ years driving data-backend development, building scalable data pipelines & systems.',
-  'Proficient in Python-SQL-Elasticsearch-Athena (5Y+); AWS (5Y+); Scrapy (3Y+), MCP (2Y+).',
-  'Proven track record in optimizing large-scale ETL workflows and reducing infra costs.',
-  'Hands-on experience in delivering AI-driven data solutions since 2023.',
+  'AI Engineer with 6 years building production data/AI systems; 2Y shipping LLM apps end to end.',
+  'Hands-on with self-hosted LLMs (llama.cpp on GPU EC2), MCP tool-calling agents, NER, LLM-based classification.',
+  'Deep retrieval-systems background: OpenSearch/Elasticsearch across 300M+ docs, 5M+ records/day.',
+  'Strong Python engineering (FastAPI, Celery, Pydantic, AWS); cuts cost & latency on large-scale infra.',
 ];
 
 export default function HeaderSection({ usage }: Props) {
@@ -49,7 +49,7 @@ export default function HeaderSection({ usage }: Props) {
           ))}
         </div>
       </div>
-      <h2 className="text-[20px] mb-3">Senior Software Engineer</h2>
+      <h2 className="text-[20px] mb-3">AI Engineer</h2>
 
       <div className="space-y-2 text-zinc-800 dark:text-zinc-400">
         <Link

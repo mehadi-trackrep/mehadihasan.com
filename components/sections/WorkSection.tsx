@@ -23,17 +23,21 @@ const exp: ExperienceProps[] = [
     ),
     head4: '03/25 - Pres.',
     bulletPoints: [
-      'Re-architected the OpenSearch cluster — reindexed 2 major indices with optimized sharding, upgraded to newer-gen instances, and cut data node count by 2, driving major cost savings & performance gains.',
+      'Deployed a self-hosted OSS LLM (llama.cpp) on a GPU-backed AWS EC2 instance, serving Lambda workloads for news categorization & company-name detection — raising data quality 70%→90% and eliminating per-token inference costs.',
 
-      'Built and shipped an MCP (Model Context Protocol) server that lets users query and act on company data in natural language from their own MCP client (Claude, ChatGPT, etc.), cutting manual effort by ~90% on key workflows via intelligent auto tool-calling.',
-
-      'Architected a core company data & metadata indexing pipeline processing 2M+ records daily, improving retrieval speed by 28.6% and cutting query response time from 800ms to 570ms across 60% of the system’s data (222M+).',
-
-      'Optimized AWS infrastructure costs by 43% through Elasticsearch query and S3 access pattern improvements, reducing sync operation time by 86%.',
+      'Built and shipped an MCP server enabling natural-language querying and actions on company data from any MCP client (Claude, ChatGPT), cutting manual effort ~90% on key workflows via intelligent auto tool-calling.',
 
       'Built an LLM-based customer profile enrichment system, adding 15+ attributes per profile and driving a 12% increase in lead conversion rates.',
 
-      'Developed an NER-based company extraction & news tags detection tool, improving data extraction accuracy by 25% and reducing Elasticsearch load by 38%.',
+      'Designed an LLM-powered contact classification pipeline categorizing job titles into function/seniority taxonomies, replacing brittle rule-based matching.',
+
+      'Developed an NER-based company extraction and news-tag detection service, improving extraction accuracy by 25% and reducing Elasticsearch load by 38%.',
+
+      'Deployed an AI-assisted crawling service (Crawl4ai) on EC2 as a resilient fallback layer, recovering structured contact data from JS-heavy sites where conventional scrapers failed.',
+
+      'Architected the core company data & metadata indexing pipeline processing 5M+ records daily — the retrieval backbone for downstream AI features — cutting query response time 800ms→570ms across 300M+ documents.',
+
+      'Optimized AWS infra costs by 43% and cut sync time 86% via OpenSearch re-architecture (resharding, instance upgrades, 2 fewer data nodes) and S3 access-pattern improvements.',
     ],
   },
   {
@@ -51,11 +55,7 @@ const exp: ExperienceProps[] = [
     ),
     head4: '10/22 - 03/25',
     bulletPoints: [
-      'Built a company matching service using AWS Elasticsearch to support large-scale user file imports and downstream CRM sync operations.',
-
-      'Co-developed a Pub/Sub-based event bus system to process and route user request events across services.',
-
-      'Built a keyword extraction tool and exposed it as an API for retrieving each company’s activity texts.',
+      'Built a company matching service (AWS Elasticsearch) for large-scale user file imports & CRM sync, plus a keyword extraction API for company activity texts.',
     ],
   },
   {
@@ -73,11 +73,7 @@ const exp: ExperienceProps[] = [
     ),
     head4: '11/20 - 10/22',
     bulletPoints: [
-      'Developed a collaborative filtering tool to find similarities across specific data dimensions among users’ sets of company data.',
-
-      'Built a Grafana dashboard and alerting system for logs and metadata across several data pipelines, integrated with Slack to notify the team of internal incidents.',
-
-      'Performed data modeling and schema design for MySQL, Athena with Iceberg tables, and Elasticsearch.',
+      'Built a collaborative-filtering similarity engine to surface related companies across multiple data dimensions in users’ portfolios.',
     ],
   },
 ];

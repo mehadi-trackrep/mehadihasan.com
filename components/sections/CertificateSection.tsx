@@ -6,22 +6,13 @@ import TitleWithLink from '@/components/resume/TitleWithLink';
 
 const certificates: CertificateProps[] = [
   {
-    title: 'Big Data Fundamentals with PySpark',
+    title: 'Neural Networks and Deep Learning',
     org: {
       name: '',
       logo: '',
     },
-    time: '2026 - ',
-    link: 'https://www.datacamp.com/statement-of-accomplishment/course/063b85cd92a4776557238404d56f7ee28d3a16f0?raw=1',
-  },
-  {
-    title: 'Intermediate DBT',
-    org: {
-      name: '',
-      logo: '',
-    },
-    time: '2026 - ',
-    link: 'https://www.datacamp.com/statement-of-accomplishment/course/a136dd06707d348d078a3704417c7dbb4421dbb3?raw=1',
+    time: '2020 - ',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/YDBBF7U3JJEA',
   },
   {
     title: 'SQL (Advanced) Certificate - HackerRank',
@@ -41,15 +32,6 @@ const certificates: CertificateProps[] = [
     time: '2020 - ',
     link: 'https://www.coursera.org/account/accomplishments/certificate/WFYBF6VSFBH3',
   },
-  {
-    title: 'Neural Networks and Deep Learning',
-    org: {
-      name: '',
-      logo: '',
-    },
-    time: '2020 - ',
-    link: 'https://www.coursera.org/account/accomplishments/certificate/YDBBF7U3JJEA',
-  }
 ];
 
 function Certificate({ title, link, org, time }: CertificateProps) {
