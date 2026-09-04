@@ -27,7 +27,7 @@ const exp: ExperienceProps[] = [
 
       'Built and shipped an MCP (Model Context Protocol) server that lets users query and act on company data in natural language from their own MCP client (Claude, ChatGPT, etc.), cutting manual effort by ~90% on key workflows via intelligent auto tool-calling.',
 
-      'Architected a core company data & metadata indexing pipeline processing 2M+ records daily, improving retrieval speed by 28.6% and cutting query response time from 800ms to 570ms across 60% of the system’s data (222M+).',
+      'Architected a core company data & metadata indexing pipeline processing 5M+ records daily, improving retrieval speed by 28.6% and cutting query response time from 800ms to 570ms across 60% of the system’s data (300M+).',
 
       'Optimized AWS infrastructure costs by 43% through Elasticsearch query and S3 access pattern improvements, reducing sync operation time by 86%.',
 

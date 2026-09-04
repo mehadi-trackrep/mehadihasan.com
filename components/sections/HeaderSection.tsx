@@ -14,8 +14,8 @@ type Props = {
 };
 
 const summary = [
-  '5+ years driving data-backend development, building scalable data pipelines & systems.',
-  'Proficient in Python-SQL-Elasticsearch-Athena (5Y+); AWS (5Y+); Scrapy (3Y+), MCP (2Y+).',
+  '6 years driving data-backend development, building scalable data pipelines & systems.',
+  'Proficient in Python-SQL-Elasticsearch-Athena (6Y); AWS (6Y); Scrapy (3Y), LLM-MCP (2Y).',
   'Proven track record in optimizing large-scale ETL workflows and reducing infra costs.',
   'Hands-on experience in delivering AI-driven data solutions since 2023.',
 ];
