@@ -25,15 +25,13 @@ const exp: ExperienceProps[] = [
     bulletPoints: [
       'Re-architected the OpenSearch cluster — reindexed 2 major indices with optimized sharding, upgraded to newer-gen instances, and cut data node count by 2, driving major cost savings & performance gains.',
 
-      'Built and shipped an MCP (Model Context Protocol) server that lets users query and act on company data in natural language from their own MCP client (Claude, ChatGPT, etc.), cutting manual effort by ~90% on key workflows via intelligent auto tool-calling.',
+      'Built and shipped an MCP (Model Context Protocol) server that lets users query and act on company data in natural language from their own MCP client (Claude, ChatGPT), cutting manual effort by ~90% on key workflows via intelligent auto tool-calling.',
 
-      'Architected a core company data & metadata indexing pipeline processing 5M+ records daily, improving retrieval speed by 28.6% and cutting query response time from 800ms to 570ms across 60% of the system’s data (300M+).',
+      'Architected the core company data and metadata indexing pipeline processing 10M+ records daily — over a billion records a year — across a curated 300M+ document search index, improving retrieval speed 28.6% and cutting query response time from 800ms to 570ms on 60% of the system’s data.',
 
-      'Optimized AWS infrastructure costs by 43% through Elasticsearch query and S3 access pattern improvements, reducing sync operation time by 86%.',
+      'Co-developed a contacts data enrichment pipeline combining multiple data sources with SERP API and LLM-based extraction, improving data coverage roughly 85% over the previous system.',
 
-      'Built an LLM-based customer profile enrichment system, adding 15+ attributes per profile and driving a 12% increase in lead conversion rates.',
-
-      'Developed an NER-based company extraction & news tags detection tool, improving data extraction accuracy by 25% and reducing Elasticsearch load by 38%.',
+      'Built an LLM-based customer profile enrichment system adding 15+ attributes per profile; company KPI reporting showed a 12% increase in lead conversion following rollout.'
     ],
   },
   {
@@ -51,11 +49,13 @@ const exp: ExperienceProps[] = [
     ),
     head4: '10/22 - 03/25',
     bulletPoints: [
-      'Built a company matching service using AWS Elasticsearch to support large-scale user file imports and downstream CRM sync operations.',
+      'Optimized AWS infrastructure costs by 43% through Elasticsearch query and S3 access pattern improvements, reducing sync operation time by 86%.',
 
-      'Co-developed a Pub/Sub-based event bus system to process and route user request events across services.',
+      'Co-developed the ingestion architecture spanning real-time and batch paths: a Pub/Sub event bus routing Discover app events.',
 
-      'Built a keyword extraction tool and exposed it as an API for retrieving each company’s activity texts.',
+      'Built a real-time company matching service on AWS Elasticsearch handling 50k–200k rows per import, powering user file uploads and CRM sync.',
+
+      'Built an NER-based company extraction and news tagging service, improving extraction accuracy 25% and cutting Elasticsearch load 38%.',
     ],
   },
   {
@@ -74,10 +74,9 @@ const exp: ExperienceProps[] = [
     head4: '11/20 - 10/22',
     bulletPoints: [
       'Developed a collaborative filtering tool to find similarities across specific data dimensions among users’ sets of company data.',
+      
+      'Built and maintained Scrapy spiders collecting company and news data from 12 websites plus several partner APIs, averaging 25k records daily.',
 
-      'Built a Grafana dashboard and alerting system for logs and metadata across several data pipelines, integrated with Slack to notify the team of internal incidents.',
-
-      'Performed data modeling and schema design for MySQL, Athena with Iceberg tables, and Elasticsearch.',
     ],
   },
 ];

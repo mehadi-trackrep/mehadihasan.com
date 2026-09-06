@@ -14,9 +14,8 @@ type Props = {
 };
 
 const summary = [
-  '6 years driving data-backend development, building scalable data pipelines & systems.',
+  '6 years building large-scale data pipelines, lakehouse architecture (S3 + Apache Iceberg + Athena), and OpenSearch search infrastructure — cutting AWS costs 43% along the way.',
   'Proficient in Python-SQL-Elasticsearch-Athena (6Y); AWS (6Y); Scrapy (3Y), LLM-MCP (2Y).',
-  'Proven track record in optimizing large-scale ETL workflows and reducing infra costs.',
   'Hands-on experience in delivering AI-driven data solutions since 2023.',
 ];
 
@@ -49,7 +48,7 @@ export default function HeaderSection({ usage }: Props) {
           ))}
         </div>
       </div>
-      <h2 className="text-[20px] mb-3">Senior Software Engineer</h2>
+      <h2 className="text-[20px] mb-3">Data Engineer</h2>
 
       <div className="space-y-2 text-zinc-800 dark:text-zinc-400">
         <Link

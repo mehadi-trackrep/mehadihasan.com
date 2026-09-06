@@ -7,11 +7,8 @@ export default function SkillSection() {
     'Python',
     'SQL',
     'Elasticsearch',
+    'Kinesis',
     'Scrapy',
-    'DBT',
-    'PySpark',
-    'Kafka',
-    'Airflow',
     'Pandas',
     'Iceberg',
     'Crawl4ai',
@@ -23,7 +20,10 @@ export default function SkillSection() {
     'MCP',
     'Git',
     'UV',
-    'Celery'
+    'Celery',
+    'DBT',
+    'PySpark',
+    'Airflow'
   ];
 
   const stackOverflowBadges = [

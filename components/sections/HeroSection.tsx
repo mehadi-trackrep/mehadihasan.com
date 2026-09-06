@@ -125,16 +125,25 @@ function HeroSection() {
             <h1 className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white">
               <span className="block">Data Engineer</span>
               <span className="text-2xl lg:text-[26px] xl:text-4xl block mt-2 text-gray-600 dark:text-slate-500">
-                & AI Enthusiast
+                & AI Engineer
               </span>
             </h1>
 
             {/** <!-- Sub-headline --> */}
             {/** <!-- Sub-headline --> */}
             <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
-              <span className="text-blue-500 font-bold">&lt;</span> Passionate about designing and optimizing high-performance, scalable data pipelines and implementing AI-driven solutions. 
-              Skilled in Python, SQL, Elasticsearch, Scrapy, Apache Iceberg, Playwright, Crawl4ai, API development, Amazon Athena, AWS Glue, and a wide range of AWS services,
-              with a strong focus on driving data-informed decisions. Building MCP server, LLM-backed AI agents and workflows with tech stacks - Llama.cpp, LangChain, LangGraph etc. <span className="text-purple-500 font-bold">/&gt;</span>
+              <span className="text-blue-500 font-bold">&lt;</span> I build the data infrastructure behind a Swedish B2B sales intelligence product —
+pipelines processing 10M+ records daily into a 300M+ document Elasticsearch index,
+an S3 + Apache Iceberg lakehouse queried through Athena, and search clusters I've
+re-architected to cut AWS costs 43%.
+
+Since 2023 I've been building the AI layer on top: a self-hosted LLM on llama.cpp,
+MCP servers, LangChain and LangGraph agents, and a RAG proof-of-concept over our
+Elasticsearch data that lets clients query companies, news, and recruitment in
+natural language.
+
+Python · SQL · Elasticsearch/OpenSearch · AWS · Iceberg · Athena · Glue · Scrapy ·
+Crawl4ai · Playwright · FastAPI · llama.cpp · LangChain · LangGraph · MCP · RAG <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
 
             {/** <!-- CTA Buttons --> */}
