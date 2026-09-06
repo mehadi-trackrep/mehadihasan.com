@@ -26,7 +26,7 @@ export default function RootLayout({
       className="m-0 h-full p-0 antialiased"
       suppressHydrationWarning
     >
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>
           <ScrollToTopButton />
           <div className="flex h-full flex-col bg-white px-6 transition dark:bg-blue2-900 sm:px-6">

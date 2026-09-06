@@ -134,10 +134,10 @@ function HeroSection() {
             <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
               <span className="text-blue-500 font-bold">&lt;</span> I build the data infrastructure behind a Swedish B2B sales intelligence product —
 pipelines processing 10M+ records daily into a 300M+ document Elasticsearch index,
-an S3 + Apache Iceberg lakehouse queried through Athena, and search clusters I've
+an S3 + Apache Iceberg lakehouse queried through Athena, and search clusters I&apos;ve
 re-architected to cut AWS costs 43%.
 
-Since 2023 I've been building the AI layer on top: a self-hosted LLM on llama.cpp,
+Since 2023 I&apos;ve been building the AI layer on top: a self-hosted LLM on llama.cpp,
 MCP servers, LangChain and LangGraph agents, and a RAG proof-of-concept over our
 Elasticsearch data that lets clients query companies, news, and recruitment in
 natural language.

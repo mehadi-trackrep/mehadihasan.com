@@ -122,10 +122,7 @@ const TestimonialSection = () => {
                 className="transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 dark:border-white2-80 dark:bg-white2-40"
                 key={testimonial.name}
               >
-                <Link
-                  href="https://www.linkedin.com/in/mmh49/details/recommendations"
-                  target="_blank"
-                >
+                <div>
                   <div className="flex flex-col items-center">
                     <div className="flex flex-col items-center sm:flex-row sm:items-start justify-start mb-4">
                       <div className="shrink-0 relative w-fit h-fit">
@@ -172,7 +169,7 @@ const TestimonialSection = () => {
                     View on LinkedIn <FaLinkedin className="w-5 h-5" />
                   </a> */}
                   </div>
-                </Link>
+                </div>
               </div>
             ))}
           </div>
