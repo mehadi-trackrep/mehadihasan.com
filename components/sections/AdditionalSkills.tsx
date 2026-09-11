@@ -5,10 +5,10 @@ import Experience from '@/components/Experience';
 const exp: ExperienceProps[] = [
   {
     bulletPoints: [
-      'ACM ICPC Dhaka Regional 2018: I have participated with a team of three members. Rank: 63 among 298 teams.',
-      'Hackathon: Champion of Hackathon in IUT 9th ICT Fest, 2017, Dept. of CSE, IUT.',
-      'SQL(HackerRank): Solved all the problems and got five stars.',
-      'Solved 1130+ problems in various online judges such as 215+ on Leetcode (136+ Medium), 135+ on Codeforces, 100+ on LightOj, etc.',
+      'ACM ICPC Dhaka Regional 2018 — ranked 63rd of 298 teams, competing in a team of three.',
+      'Hackathon champion — IUT 9th ICT Fest 2017, Dept. of CSE, IUT.',
+      'HackerRank SQL — solved every problem and earned a 5-star rating.',
+      'Solved 1,130+ problems across online judges: 215+ on LeetCode (136+ medium), 135+ on Codeforces, 100+ on LightOJ.',
     ],
   },
 ];

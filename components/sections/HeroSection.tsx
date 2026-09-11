@@ -138,12 +138,12 @@ an S3 + Apache Iceberg lakehouse queried through Athena, and search clusters I&a
 re-architected to cut AWS costs 43%.
 
 Since 2023 I&apos;ve been building the AI layer on top: a self-hosted LLM on llama.cpp,
-MCP servers, LangChain and LangGraph agents, and a RAG proof-of-concept over our
+MCP servers, LangChain based agents, and a RAG proof-of-concept over our
 Elasticsearch data that lets clients query companies, news, and recruitment in
 natural language.
 
 Python · SQL · Elasticsearch/OpenSearch · AWS · Iceberg · Athena · Glue · Scrapy ·
-Crawl4ai · Playwright · FastAPI · llama.cpp · LangChain · LangGraph · MCP · RAG <span className="text-purple-500 font-bold">/&gt;</span>
+Crawl4ai · Playwright · FastAPI · llama.cpp · LangChain · MCP · RAG <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
 
             {/** <!-- CTA Buttons --> */}

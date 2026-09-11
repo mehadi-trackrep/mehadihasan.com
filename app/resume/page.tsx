@@ -15,7 +15,7 @@ import { getSiteMetaData } from '@/utils/seo';
 export async function generateMetadata() {
   return getSiteMetaData({
     title: 'Resume | Md. Mehadi Hasan',
-    description: 'Md. Mehadi Hasan - Data Engineer',
+    description: 'Md. Mehadi Hasan - Senior Data & AI Engineer',
   });
 }
 

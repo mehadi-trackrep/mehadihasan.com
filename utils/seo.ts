@@ -1,5 +1,5 @@
 export function getSiteMetaData({
-  title = 'Md. Mehadi Hasan | Expert Data Engineer & AI Enthusiast',
+  title = 'Md. Mehadi Hasan | Senior Data & AI Engineer',
   description = 'Senior Software Engineer (Data team) at Goava | Data Engineering | Elasticsearch | DevOps (AWS) | SQL | ETL | Scraping | Microservices | AI - Helping people by data storytelling to make high valuable business decisions.',
   type = 'website',
   author = '@mehadihasan',
@@ -7,6 +7,7 @@ export function getSiteMetaData({
   creator = '@mehadihasan',
   keywords = [
     'Data Engineer',
+    'AI Engineer',
     'Elasticsearch',
     'Scrapy',
     'SQL',

@@ -24,7 +24,7 @@ export default function ProjectSection() {
       ),
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'An effective hotel search web app which fetches the hotel info from booking.com and agoda.com based on user input and shows the best matches.',
+        'Hotel search app that pulls listings from booking.com and agoda.com for a user’s criteria and surfaces the best matches.',
       ],
     },
     {
@@ -38,7 +38,7 @@ export default function ProjectSection() {
       head2: <LabelWithGraphic icon={Icons.Stack} content="UV, Pydantic, Factory design pattern, SOLID principles" />,
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'An etl pipeline - fetch data from AWS Athena and store them into ES/OpenSearch & DynamoDB using UV package manager.',
+        'ETL pipeline that moves data from AWS Athena into Elasticsearch/OpenSearch and DynamoDB.',
       ],
     },
     {
@@ -51,7 +51,7 @@ export default function ProjectSection() {
       head2: <LabelWithGraphic icon={Icons.Stack} content="Pandas, Scikit-Learn, Ensemble, OneVsRestClassifier" />,
       head3: <LabelWithGraphic icon={Icons.Star} content="" />,
       bulletPoints: [
-        'Vulnerability prediction for groundwater resources using DRASTIC model, which is a widely used method for assessing groundwater vulnerability.',
+        'Groundwater vulnerability prediction built on the DRASTIC model with ensemble multi-class classifiers.',
       ],
     },
   ];

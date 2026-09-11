@@ -14,9 +14,9 @@ type Props = {
 };
 
 const summary = [
-  '6 years building large-scale data pipelines, lakehouse architecture (S3 + Apache Iceberg + Athena), and OpenSearch search infrastructure — cutting AWS costs 43% along the way.',
-  'Proficient in Python-SQL-Elasticsearch-Athena (6Y); AWS (6Y); Scrapy (3Y), LLM-MCP (2Y).',
-  'Hands-on experience in delivering AI-driven data solutions since 2023.',
+  '6 years building large-scale data pipelines, lakehouse architecture (S3 + Apache Iceberg + Athena), and OpenSearch infrastructure — cutting AWS costs 43% along the way.',
+  'Python, SQL, Elasticsearch and Athena (6y); AWS (6y); Scrapy (3y); LLM and MCP (2y).',
+  'Delivering AI-driven data solutions hands-on since 2023.',
 ];
 
 export default function HeaderSection({ usage }: Props) {
@@ -30,9 +30,8 @@ export default function HeaderSection({ usage }: Props) {
         </h1>
         <div className="flex items-center mt-1 ml-3 text-zinc-900 dark:text-zinc-200">
           {socialLinks.map(({ name, icon: Icon, link }) => (
-            <>
+            <React.Fragment key={name}>
               <Link
-                key={name}
                 href={link}
                 target="_blank"
                 className="ml-1 text-zinc-700 dark:text-zinc-400"
@@ -44,11 +43,11 @@ export default function HeaderSection({ usage }: Props) {
               </Link>
 
               <Tooltip id={name} variant={theme as VariantType} />
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
-      <h2 className="text-[20px] mb-3">Data Engineer</h2>
+      <h2 className="text-[20px] mb-3">Senior Data & AI Engineer</h2>
 
       <div className="space-y-2 text-zinc-800 dark:text-zinc-400">
         <Link
