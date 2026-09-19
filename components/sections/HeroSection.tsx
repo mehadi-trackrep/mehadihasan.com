@@ -123,9 +123,9 @@ function HeroSection() {
 
             {/** <!-- Main Headline --> */}
             <h1 className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 dark:text-white">
-              <span className="block">Data Engineer</span>
+              <span className="block">Senior Software Engineer</span>
               <span className="text-2xl lg:text-[26px] xl:text-4xl block mt-2 text-gray-600 dark:text-slate-500">
-                & AI Engineer
+                (Data & AI)
               </span>
             </h1>
 

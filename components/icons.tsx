@@ -17,6 +17,7 @@ import {
   Users,
   Link,
   Bot,
+  Download,
 } from "lucide-react";
 
 import type { LucideProps, LucideIcon } from "lucide-react";
@@ -41,4 +42,5 @@ export const Icons = {
   Users: Users,
   Link: Link,
   Bot: Bot,
+  Download: Download,
 } as const;

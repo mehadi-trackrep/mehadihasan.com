@@ -16,6 +16,14 @@ type Testimonial = {
   linkedinLink: string | UrlObject;
 };
 
+// Split the raw text on blank lines so each block renders as its own paragraph.
+// Single line breaks inside a block are kept by the `whitespace-pre-line` class.
+const toParagraphs = (text: string) =>
+  text
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+
 const testimonials: Testimonial[] = [
   // {
   //   name: 'Håkan Höglund',
@@ -34,6 +42,64 @@ const testimonials: Testimonial[] = [
   //   linkedinLink: 'https://www.linkedin.com/in/anton-weihard',
   // },
   {
+    name: 'Håkan Höglund ',
+    img: '/images/people/håkan-höglund.jpeg',
+    designation:
+      'Chief Technology Officer at Goava',
+    caption: 'September 11, 2026, Håkan managed Md. Mehadi directly',
+    text: `I have had the pleasure of working with Mehadi Hasan at Goava Sales Intelligence AB since December 2020. He was promoted to Senior Software Engineer in March 2026.
+
+Mehadi is a capable and dependable engineer with experience in backend development, data pipelines and cloud infrastructure. He takes responsibility for his systems from design through to production and pays attention to detail.
+
+His work at Goava includes ownership of our primary company data pipeline, development of the Twingly API integration and news pipeline powering our company news and recruitment signals, and the design of our contacts data pipeline. The latter consolidates director and people data from multiple sources with reliable deduplication and full change history.
+
+Mehadi has also made important contributions to maintaining and improving our OpenSearch infrastructure. He has worked through production incidents with a focus on identifying and addressing the underlying causes. His redesign of our sharding strategy and reindexing of two of our largest indices enabled us to right-size the cluster and commit to reserved instances. We expect these changes to reduce our AWS OpenSearch spend by around 40%.
+
+Mehadi is proactive and takes ownership of his work. He identifies problems and cost inefficiencies and proposes practical solutions. He considers security in his design decisions and is open about trade-offs, risks and mistakes. I appreciate his honesty and straightforward communication.
+
+I can confidently recommend Mehadi for backend development, data engineering or cloud infrastructure work. He would be a valuable addition to any development team.`,
+    linkedinLink: 'https://www.linkedin.com/in/h%C3%A5kan-h%C3%B6glund-03ba622/',
+  },
+  {
+    name: 'Asfak Mahamud',
+    img: '/images/people/asfak-mahamud.jpeg',
+    designation:
+      'Lead Engineer (Data Team)',
+    caption: 'September 11, 2026, Asfak worked with Md. Mehadi on the same team',
+    text: `I have worked closely with Mehadi at Goava Data Backend Team. What stands out most is his character. People trust him. He is honest. He is consistent. He is easy to rely on, especially when things get stressful.
+
+If he commits to something, he gets it done. If something can't be done, he tells you early. He does not wait until the last minute.
+
+He is also a great teammate. He shares what he knows. He checks in on people. He stays calm with hard problems. This calmness makes the problems feel smaller for everyone else.
+
+He is curious by nature. He is always learning something new. He likes to share what he learns. He does this with humility. He never makes it about himself, even when he solved the hard part.
+
+I recommend him to any team. :)`,
+    linkedinLink: 'https://www.linkedin.com/in/asfakmahamud/',
+  },
+  {
+    name: 'Rana Asif Bin Hamid',
+    img: '/images/people/rana-asif-bin-hamid.jpeg',
+    designation:
+      'VP of Engineering at Goava',
+    caption: 'September 11, 2026, Rana Asif Bin managed Md. Mehadi directly',
+    text: "Mehadi is a standout data engineer who pairs deep architectural expertise with massive bottom-line ROI. He took full ownership of our primary data infrastructure, utilizing Python, SQL, S3 Athena Iceberg, Kinesis and AWS to scale our news and contacts pipelines. What impressed me most was his ability to turn critical infrastructure crises into long-term wins. When our OpenSearch cluster faced severe CPU and JVM saturation, he didn't just resolve the incident—he re-architected the sharding strategy. This optimization allowed us to transition to reserved AWS instances, cutting our total cloud spend by an incredible 43%. Mehadi is proactive, security-minded, and possesses a transparent communication style that makes him a deeply trusted asset to any engineering organization.",
+    linkedinLink: 'https://www.linkedin.com/in/rana-asif-bin-hamid-898a716/',
+  },
+  {
+    name: 'Anton Weihard ',
+    img: '/images/people/anton-weihard.jpeg',
+    designation:
+      'CEO & Co-Founder at Goava',
+    caption: 'September 15, 2026, Anton was senior to Md. Mehadi but didn’t manage Md. Mehadi directly',
+    text: `I worked with Mehadi for six years at Goava, first as CPO from 2020 to 2024 and now as CEO. In that time he was a key contributor to several of our more foundational systems, including our core company data pipeline, our news and recruitment signal pipeline, and the contacts pipeline that consolidates director and people data from multiple external sources.
+One thing that stood out was his work on our OpenSearch cluster. We had a run of production incidents there, high JVM pressure, CPU saturation, exhausted thread pools, and instead of just restarting things and hoping, Mehadi consistently dug in and found the actual root cause. That work led to a redesign of our sharding strategy and a reindex of our two largest indices, which right-sized the cluster enough for us to commit to reserved instances, a change we project will meaningfully cut our AWS costs.
+He takes ownership of what he’s working on without needing to be asked, and tends to flag problems early, usually with a fix already in mind. He’s also straightforward about trade-offs, risks, and his own mistakes, which made his updates easy to trust.
+I'd strongly recommend Mehadi for engineering roles that call for this kind of technical depth and reliability.`,
+    linkedinLink: 'https://www.linkedin.com/in/anton-weihard/',
+  },
+
+  {
     name: 'Ashraful Islam',
     img: '/images/people/ashraful-islam.jpeg',
     designation:
@@ -47,7 +113,7 @@ const testimonials: Testimonial[] = [
     img: '/images/people/sabbir-amin.jpeg',
     designation:
       'Technical Lead at TechCare | Ex Senior Software Engineer at Goava | Machine Learning | Recommendation System | Opensource Contributor',
-    caption: 'February 25, 2024, Sabbir Amin worked with Mehadi in different teams',
+    caption: 'February 25, 2024, Sabbir worked with Md. Mehadi but on different teams',
     text: "Md. Mehadi Hasan bhai is one of the youngest minds I've been fortunate to work with. He excells in Data Engineering with lots of industry experiences and edge cases. He is honest, energetic, punctual and shows genuine interest in Data Pipeline. Once as his colleague, I wonder his frank apporach, `never-bored-to-learn` attitude and believing in doing matra to face any challenges. It's an honour to share same working space with such a nice person like him. I wish him all the best.",
     linkedinLink: 'https://www.linkedin.com/in/sabbir-amin-035009120',
   },
@@ -105,9 +171,15 @@ const TestimonialSection = () => {
     <section className="min-h-screen py-20 md:py-20">
       <div className="max-w-7xl mx-auto text-center">
         <div className="text-center mb-12">
-          <h2 className="text-carouselItems text-2xl font-bold text-gray-900 dark:text-white sm:text-4xl">
-            LinkedIn Recommendations
-          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <h2 className="text-carouselItems text-2xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+              LinkedIn Recommendations
+            </h2>
+
+            <span className="rounded-full bg-[#01754f] px-3 py-1 text-sm font-semibold text-white shadow-sm">
+              Received ({testimonials.length})
+            </span>
+          </div>
 
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
             Trusted by Industry Leaders
@@ -155,10 +227,16 @@ const TestimonialSection = () => {
                         </p>
                       </div>
                     </div>
-                    <p
-                      className="text-[1rem] text-left text-gray-800 dark:text-white mb-4"
-                      dangerouslySetInnerHTML={{ __html: testimonial.text.replace(/\n/g, '<br />') }}
-                    ></p>
+                    <div className="w-full">
+                      {toParagraphs(testimonial.text).map((paragraph, i) => (
+                        <p
+                          key={i}
+                          className="mb-4 whitespace-pre-line text-left text-[1rem] text-gray-800 dark:text-white"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
 
                     {/* <a
                     href={testimonial.linkedin}
