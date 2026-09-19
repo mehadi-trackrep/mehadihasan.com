@@ -1,6 +1,6 @@
 export function getSiteMetaData({
   title = 'Md. Mehadi Hasan | Senior Data & AI Engineer',
-  description = 'Senior Software Engineer (Data team) at Goava | Data Engineering | Elasticsearch | DevOps (AWS) | SQL | ETL | Scraping | Microservices | AI - Helping people by data storytelling to make high valuable business decisions.',
+  description = 'SSE | Data Engineering & AI | Python, Elasticsearch, SQL, ETL/ELT, Iceberg Lakehouse, Athena, AWS, LLM, MCP, RAG | 6 yrs, 10M+ records/day, 300M+ curated docs | Open to remote & relocation.',
   type = 'website',
   author = '@mehadihasan',
   images = ['https://mehadihasan-com.vercel.app/images/og/website.png'],
@@ -9,11 +9,12 @@ export function getSiteMetaData({
     'Data Engineer',
     'AI Engineer',
     'Elasticsearch',
-    'Scrapy',
     'SQL',
     'Data modeling',
-    'ETL',
-    'Data pipeline',
+    'ETL/ELT',
+    'Iceberg Lakehouse',
+    'Athena',
+    'Scrapy',
     'Crawl4ai',
     'Playwright',
     'FastAPI',
@@ -21,7 +22,8 @@ export function getSiteMetaData({
     'AWS',
     'LLM',
     'AI',
-    'Machine Learning'
+    'MCP',
+    'RAG',
   ],
 }: {
   title?: string;
