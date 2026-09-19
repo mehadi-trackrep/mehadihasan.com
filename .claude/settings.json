@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sIL -o /dev/null -w \"preview: %{http_code}\\\\n\" \"https://docs.google.com/document/d/1qodgDu785Fz8LLbIHuTckHFUgQBVcUeiDh_Gb3pSvBo/preview\")",
+      "Bash(curl -sL -D - -o /private/tmp/claude-501/-Users-md-mehadihasan-PERSONAL--repositories-mehadihasan-com/341b94ab-40e7-4c22-af45-be52241a23f7/scratchpad/resume.pdf \"https://docs.google.com/document/d/1qodgDu785Fz8LLbIHuTckHFUgQBVcUeiDh_Gb3pSvBo/export?format=pdf\")"
+    ]
+  }
+}
