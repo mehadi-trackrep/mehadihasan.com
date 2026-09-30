@@ -19,10 +19,9 @@ export default function ResumeDocViewer() {
     <div className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-4">
       <div className="flex items-center justify-end">
         <Button
-          href={RESUME_DOC_PDF_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
+          href="/api/resume"
+          download="Md-Mehadi-Hasan-Resume.pdf"
+          prefetch={false}
         >
           Download Resume
           <Icons.Download className="h-4 w-4" />
