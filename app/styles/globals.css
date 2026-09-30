@@ -38,3 +38,25 @@
     @apply text-white dark:text-black;
   }
 }
+
+/* Soft bottom fade for clamped text (see components/ExpandableText.tsx).
+   --fade is registered so the fade can transition smoothly with the height. */
+@property --fade {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
+.expandable-fade,
+.expandable-fade-off {
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--fade)), transparent);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - var(--fade)), transparent);
+}
+
+.expandable-fade {
+  --fade: 3.5rem;
+}
+
+.expandable-fade-off {
+  --fade: 0px;
+}

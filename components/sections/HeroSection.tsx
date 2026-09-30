@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
+import ExpandableText from '@/components/ExpandableText';
 import styles from './HeroSection.module.css';
 
 function HeroSection() {
@@ -131,6 +132,10 @@ function HeroSection() {
 
             {/** <!-- Sub-headline --> */}
             {/** <!-- Sub-headline --> */}
+            <ExpandableText
+              collapsedHeight={140}
+              toggleClassName="justify-center lg:justify-start"
+            >
             <p className="text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
               <span className="text-blue-500 font-bold">&lt;</span> I build the data infrastructure behind a Swedish B2B sales intelligence product —
 pipelines processing 10M+ records daily into a 300M+ document Elasticsearch index,
@@ -145,6 +150,7 @@ natural language.
 Python · SQL · Elasticsearch/OpenSearch · AWS · Iceberg · Athena · Glue · Scrapy ·
 Crawl4ai · Playwright · FastAPI · llama.cpp · LangChain · MCP · RAG <span className="text-purple-500 font-bold">/&gt;</span>
             </p>
+            </ExpandableText>
 
             {/** <!-- CTA Buttons --> */}
             {/* <div className="flex flex-wrap gap-4 justify-center lg:justify-start">

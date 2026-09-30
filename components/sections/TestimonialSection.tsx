@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { UrlObject } from 'url';
 import Image from 'next/image';
 import { useWindowWidth } from '@react-hook/window-size';
+import ExpandableText from '@/components/ExpandableText';
 import { FaLinkedin, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 type Testimonial = {
@@ -188,7 +189,7 @@ const TestimonialSection = () => {
 
         <div className="relative">
           {/* Carousel Container */}
-          <div className="grid grid-cols-1 gap-4 px-5  md:grid-cols-2 lg:grid-cols-3 1.5xl:px-0">
+          <div className="grid grid-cols-1 items-start gap-4 px-5 md:grid-cols-2 lg:grid-cols-3 1.5xl:px-0">
             {displayedTestimonials.map((testimonial) => (
               <div
                 className="transform rounded-lg border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 dark:border-white2-80 dark:bg-white2-40"
@@ -227,7 +228,7 @@ const TestimonialSection = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="w-full">
+                    <ExpandableText className="w-full" collapsedHeight={200}>
                       {toParagraphs(testimonial.text).map((paragraph, i) => (
                         <p
                           key={i}
@@ -236,7 +237,7 @@ const TestimonialSection = () => {
                           {paragraph}
                         </p>
                       ))}
-                    </div>
+                    </ExpandableText>
 
                     {/* <a
                     href={testimonial.linkedin}
